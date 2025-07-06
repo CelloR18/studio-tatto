@@ -16,6 +16,7 @@
             secondary: '#1a1a1a',
           },
           fontFamily: {
+            pricedown: ['Pricedown', 'sans-serif'],
             anton: ['Anton', 'sans-serif'],
             inter: ['Inter', 'sans-serif'],
           }
@@ -25,6 +26,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pricedown">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-secondary text-white dark:bg-white dark:text-secondary font-inter">
@@ -33,14 +35,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
         <div class="flex items-center">
-          <span class="text-2xl font-anton text-primary">Pedro Tattoo | Por toda a vida</span>
+          <span class="text-2xl font-pricedown text-primary">Pedro Tattoo | Por toda a vida</span>
         </div>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#about" class="hover:text-primary transition">Sobre</a>
-          <a href="#styles" class="hover:text-primary transition">Estilos</a>
-          <a href="#portfolio" class="hover:text-primary transition">Portfólio</a>
-          <a href="#testimonials" class="hover:text-primary transition">Depoimentos</a>
-          <a href="#contact" class="hover:text-primary transition">Contato</a>
+          <a href="#about" class="hover:text-primary transition font-pricedown">SOBRE</a>
+          <a href="#styles" class="hover:text-primary transition font-pricedown">ESTILOS</a>
+          <a href="#portfolio" class="hover:text-primary transition font-pricedown">PORTFÓLIO</a>
+          <a href="#care" class="hover:text-primary transition font-pricedown">CUIDADOS</a>
+          <a href="#contact" class="hover:text-primary transition font-pricedown">CONTATO</a>
           <button onclick="document.documentElement.classList.toggle('dark')" class="ml-4 p-2 rounded-full bg-gray-800 dark:bg-yellow-400 dark:text-black">
             <i class="fas fa-moon dark:hidden"></i>
             <i class="fas fa-sun hidden dark:block"></i>
@@ -55,14 +57,14 @@
     </div>
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-black dark:bg-white py-4 px-4">
-      <div class="flex flex-col space-y-4">
-        <a href="#about" class="hover:text-primary transition">Sobre</a>
-        <a href="#styles" class="hover:text-primary transition">Estilos</a>
-        <a href="#portfolio" class="hover:text-primary transition">Portfólio</a>
-        <a href="#testimonials" class="hover:text-primary transition">Depoimentos</a>
-        <a href="#contact" class="hover:text-primary transition">Contato</a>
+      <div class="flex flex-col space-y-4 font-pricedown">
+        <a href="#about" class="hover:text-primary transition">SOBRE</a>
+        <a href="#styles" class="hover:text-primary transition">ESTILOS</a>
+        <a href="#portfolio" class="hover:text-primary transition">PORTFÓLIO</a>
+        <a href="#care" class="hover:text-primary transition">CUIDADOS</a>
+        <a href="#contact" class="hover:text-primary transition">CONTATO</a>
         <button onclick="document.documentElement.classList.toggle('dark')" class="text-left hover:text-primary transition">
-          Alternar Modo Escuro
+          Alternar Modo
         </button>
       </div>
     </div>
@@ -70,15 +72,16 @@
 
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center relative" style="background-image: url('./landing-pedro-tattoo/pedro-studio.webp')">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative z-10 bg-black bg-opacity-70 p-8 rounded-xl dark:bg-white dark:bg-opacity-80 max-w-4xl mx-4">
-      <h1 class="text-4xl md:text-6xl mb-6 font-anton">Tatuagens que marcam mais do que a pele.</h1>
-      <p class="text-lg md:text-xl mb-8">Expressar quem você é nunca foi tão permanente — e tão autêntico.</p>
+      <h1 class="text-4xl md:text-6xl mb-6 font-pricedown leading-tight">TATUAGENS QUE MARCAM MAIS DO QUE A PELE</h1>
+      <p class="text-lg md:text-2xl mb-8 font-pricedown">EXPRESSE QUEM VOCÊ É DE FORMA PERMANENTE</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="https://wa.me/5511912345678" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
-          <i class="fab fa-whatsapp mr-2"></i> Agendar pelo WhatsApp
+          <i class="fab fa-whatsapp mr-2"></i> AGENDAR PELO WHATSAPP
         </a>
-        <a href="#portfolio" class="border-2 border-white dark:border-black px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105">
-          Ver Portfólio
+        <a href="#portfolio" class="border-2 border-white dark:border-black px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105 font-pricedown">
+          VER PORTFÓLIO
         </a>
       </div>
     </div>
@@ -155,6 +158,7 @@
   </section>
 
   <!-- Portfolio Section -->
+ <!-- Portfolio Section -->
   <section id="portfolio" class="py-20 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
@@ -209,85 +213,83 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="bg-zinc-900 dark:bg-zinc-100 py-20 px-4">
+  <!-- Care FAQ Section -->
+  <section id="care" class="bg-zinc-900 dark:bg-zinc-100 py-20 px-4">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl mb-4 font-anton">O que dizem por aí...</h2>
-        <p class="text-lg">A satisfação dos nossos clientes é nossa maior recompensa.</p>
+        <h2 class="text-3xl md:text-4xl mb-4 font-anton">CUIDADOS ANTES E APÓS SUA TATUAGEM</h2>
+        <p class="text-lg">Tudo o que você precisa saber para garantir uma tatuagem perfeita e uma cicatrização impecável.</p>
       </div>
       
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-zinc-800 dark:bg-white dark:text-black p-8 rounded-xl shadow-lg">
-          <div class="flex items-center mb-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-4" alt="Lucas F.">
-            <div>
-              <h4 class="font-bold">Lucas F.</h4>
-              <div class="flex text-primary">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
+      <div class="space-y-6">
+        <!-- Before Care -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold mb-6 text-primary border-b pb-2">PREPARAÇÃO ANTES DA TATUAGEM</h3>
+          
+          <div class="space-y-4">
+            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-question-circle text-primary mr-3"></i>
+                Posso beber álcool antes da sessão?
+              </h4>
+              <p class="text-gray-300 dark:text-gray-600">Não recomendamos o consumo de álcool nas 24 horas anteriores à sessão, pois ele afina o sangue e pode aumentar o sangramento durante o processo.</p>
+            </div>
+            
+            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-question-circle text-primary mr-3"></i>
+                Devo me alimentar antes da tatuagem?
+              </h4>
+              <p class="text-gray-300 dark:text-gray-600">Sim! É fundamental fazer uma boa refeição antes da sessão. Traga também um lanche e água, principalmente para sessões longas.</p>
+            </div>
+            
+            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-question-circle text-primary mr-3"></i>
+                Posso tomar remédios para dor?
+              </h4>
+              <p class="text-gray-300 dark:text-gray-600">Evite anti-inflamatórios e aspirina antes da sessão, pois eles podem afinar o sangue. Consulte seu médico sobre outras medicações.</p>
             </div>
           </div>
-          <p class="italic mb-4">"Nunca me senti tão respeitado no processo. Pedro transformou minha ideia em algo muito melhor do que eu imaginava. O cuidado com higiene e atenção aos detalhes são impressionantes."</p>
-          <div class="text-sm text-gray-400 dark:text-gray-600">Tatuagem de dragão no braço - 2 sessões</div>
         </div>
         
-        <div class="bg-zinc-800 dark:bg-white dark:text-black p-8 rounded-xl shadow-lg">
-          <div class="flex items-center mb-4">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4" alt="Marina T.">
-            <div>
-              <h4 class="font-bold">Marina T.</h4>
-              <div class="flex text-primary">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
+        <!-- After Care -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-primary border-b pb-2">CUIDADOS APÓS A TATUAGEM</h3>
+          
+          <div class="space-y-4">
+            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-question-circle text-primary mr-3"></i>
+                Como devo lavar minha tatuagem?
+              </h4>
+              <p class="text-gray-300 dark:text-gray-600">Lave suavemente com água morna e sabão neutro 2-3 vezes ao dia. Use apenas os dedos, nunca esponjas, e seque dando leves batidinhas com papel toalha.</p>
+            </div>
+            
+            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-question-circle text-primary mr-3"></i>
+                Qual pomada devo usar?
+              </h4>
+              <p class="text-gray-300 dark:text-gray-600">Recomendamos Bepantol ou similar. Aplique uma camada bem fina 2-3 vezes ao dia após a lavagem, apenas o suficiente para manter a área hidratada.</p>
+            </div>
+            
+            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-question-circle text-primary mr-3"></i>
+                Posso ir à praia ou piscina?
+              </h4>
+              <p class="text-gray-300 dark:text-gray-600">Evite totalmente imersão em água (mar, piscina, banheira) por pelo menos 3 semanas. A exposição ao sol deve ser evitada por 1 mês.</p>
+            </div>
+            
+            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
+              <h4 class="font-bold text-lg mb-2 flex items-center">
+                <i class="fas fa-question-circle text-primary mr-3"></i>
+                Quanto tempo leva para cicatrizar?
+              </h4>
+              <p class="text-gray-300 dark:text-gray-600">A cicatrização superficial leva cerca de 2 semanas, mas a completa cicatrização das camadas mais profundas pode levar até 2 meses. Siga todos os cuidados durante este período.</p>
             </div>
           </div>
-          <p class="italic mb-4">"Studio limpo, ambiente acolhedor e um artista de verdade. Pedro tem uma paciência incrível para explicar todo o processo. Minha tatuagem ficou perfeita e recebo elogios todos os dias!"</p>
-          <div class="text-sm text-gray-400 dark:text-gray-600">Tatuagem fineline floral - 3 horas</div>
-        </div>
-        
-        <div class="bg-zinc-800 dark:bg-white dark:text-black p-8 rounded-xl shadow-lg">
-          <div class="flex items-center mb-4">
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-12 h-12 rounded-full mr-4" alt="Diego M.">
-            <div>
-              <h4 class="font-bold">Diego M.</h4>
-              <div class="flex text-primary">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <p class="italic mb-4">"Confiei de olhos fechados e o resultado foi impecável! Pedro é extremamente profissional e talentoso. Já estou planejando minha próxima tatuagem com ele."</p>
-          <div class="text-sm text-gray-400 dark:text-gray-600">Tatuagem blackwork geométrica - 2 sessões</div>
-        </div>
-        
-        <div class="bg-zinc-800 dark:bg-white dark:text-black p-8 rounded-xl shadow-lg">
-          <div class="flex items-center mb-4">
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full mr-4" alt="Ana C.">
-            <div>
-              <h4 class="font-bold">Ana C.</h4>
-              <div class="flex text-primary">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <p class="italic mb-4">"Fiz minha primeira tatuagem com o Pedro e foi uma experiência incrível. Ele me guiou em cada passo, desde a escolha do design até os cuidados pós-tatuagem. Recomendo para todos!"</p>
-          <div class="text-sm text-gray-400 dark:text-gray-600">Tatuagem minimalista - 1.5 horas</div>
         </div>
       </div>
     </div>
@@ -307,8 +309,8 @@
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div>
-                <h4 class="font-bold">Estúdio Por Toda Vida</h4>
-                <p>Avenida Presidente Vargas, 1119 - sala -  Centro<br>Presidente Epitácio/SP - CEP 19470-000</p>
+                <h4 class="font-bold">Estúdio PCT</h4>
+                <p>Rua das Artes, 123 - Vila Madalena<br>São Paulo/SP - CEP 05432-000</p>
               </div>
             </div>
             
@@ -318,7 +320,7 @@
               </div>
               <div>
                 <h4 class="font-bold">Horário de Funcionamento</h4>
-                <p>Segunda a Sexta - 09h às 19h<br>Sabado - 09h às 18:00</p>
+                <p>Segunda a Sábado - 10h às 20h<br>Domingo - Fechado</p>
               </div>
             </div>
             
@@ -437,14 +439,14 @@
   <!-- CTA Section -->
   <section class="bg-black dark:bg-gray-200 py-16 px-4 text-center">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl mb-6 font-anton">Seu corpo merece arte com propósito.</h2>
-      <p class="text-xl mb-8">Pronto para eternizar uma ideia na pele? Fale com Pedro e agende uma sessão exclusiva.</p>
+      <h2 class="text-3xl md:text-4xl mb-6 font-pricedown">SEU CORPO MERECE ARTE COM PROPÓSITO</h2>
+      <p class="text-xl mb-8 font-pricedown">PRONTO PARA ETERNIZAR UMA IDEIA NA PELE?</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="https://wa.me/5511912345678" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
-          <i class="fab fa-whatsapp mr-2"></i> Agendar pelo WhatsApp
+          <i class="fab fa-whatsapp mr-2"></i> AGENDAR PELO WHATSAPP
         </a>
-        <a href="#contact" class="border-2 border-white dark:border-black px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105">
-          <i class="fas fa-envelope mr-2"></i> Enviar Email
+        <a href="#contact" class="border-2 border-white dark:border-black px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105 font-pricedown">
+          <i class="fas fa-envelope mr-2"></i> ENVIAR EMAIL
         </a>
       </div>
     </div>
@@ -455,7 +457,7 @@
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-6 md:mb-0">
-          <span class="text-2xl font-anton text-primary">PEDRO CORDEIRO TATTOO</span>
+          <span class="text-2xl font-pricedown text-primary">PEDRO CORDEIRO TATTOO</span>
           <p class="text-sm mt-2 text-gray-400 dark:text-gray-600">Tatuagens que marcam por toda vida.</p>
         </div>
         
