@@ -59,7 +59,7 @@
     /* Estilo para o logo com borda */
     .logo-text {
       font-family: 'Pricedown', sans-serif;
-      color: #000000;
+      color: #fff;
       text-shadow: 
         -1px -1px 0 #fff,  
         1px -1px 0 #fff,
@@ -76,6 +76,9 @@
         -1px 1px 0 #000,
         1px 1px 0 #000;
       letter-spacing: 1px;
+    }
+    .ready{
+      color: #FFF;
     }
     
     /* Otimização de imagens */
@@ -966,230 +969,284 @@
     }
   });
 </script>
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 md:py-20 px-4 mobile-padding">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row gap-8 md:gap-12 mobile-stack">
-        <div class="md:w-1/2 w-full mobile-text-center">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 font-anton">Venha viver a experiência.</h2>
-          <p class="text-base md:text-lg mb-6 md:mb-8">Agende uma consulta para discutir sua ideia e transformá-la em uma obra de arte permanente.</p>
+  <!-- Contact Section - Premium Version -->
+<section id="contact" class="relative py-24 px-4 bg-gradient-to-br from-zinc-900 to-secondary dark:from-gray-100 dark:to-gray-200 overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute top-0 left-0 w-full h-full opacity-5 dark:opacity-[0.03]">
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary filter blur-3xl opacity-20"></div>
+    <div class="absolute bottom-1/3 right-1/3 w-64 h-64 rounded-full bg-yellow-500 filter blur-3xl opacity-20"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center justify-center mb-6">
+        <span class="h-px w-16 bg-primary mr-4"></span>
+        <span class="text-primary font-pricedown tracking-widest">CONEXÃO</span>
+        <span class="h-px w-16 bg-primary ml-4"></span>
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-anton mb-4">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-500">Vamos Criar Juntos</span>
+      </h2>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-300 dark:text-gray-600">
+        Sua história merece ser contada através da arte. Entre em contato para agendar sua consulta.
+      </p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-12">
+      <!-- Contact Info -->
+      <div class="lg:w-1/2 w-full space-y-8">
+        <div class="bg-zinc-800/50 dark:bg-white/10 p-8 rounded-2xl border border-zinc-700/30 dark:border-gray-200/20 hover:border-primary/50 transition">
+          <h3 class="text-2xl font-anton mb-6 flex items-center">
+            <i class="fas fa-map-marker-alt text-primary mr-3"></i>
+            <span>Nosso Estúdio</span>
+          </h3>
+          <p class="text-lg mb-6">Avenida Presidente Vargas, 1119 - Centro<br>Presidente Epitácio/SP - CEP 19470-000</p>
           
-          <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
-            <div class="flex items-start">
-              <div class="text-primary mr-3 md:mr-4 mt-1">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-base md:text-lg">Estúdio PCT</h4>
-                <p class="text-sm md:text-base">Rua das Artes, 123 - Vila Madalena<br>São Paulo/SP - CEP 05432-000</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start">
-              <div class="text-primary mr-3 md:mr-4 mt-1">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-base md:text-lg">Horário de Funcionamento</h4>
-                <p class="text-sm md:text-base">Segunda a Sábado - 10h às 20h<br>Domingo - Fechado</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start">
-              <div class="text-primary mr-3 md:mr-4 mt-1">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-base md:text-lg">Contato</h4>
-                <p class="text-sm md:text-base">WhatsApp: (11) 91234-5678<br>Email: contato@pedrocordeirotattoo.com</p>
-              </div>
-            </div>
+          <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-2xl">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.2886086296317!2d-52.1147555257884!3d-21.769088398201884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9491994ee6894739%3A0x2a17e83562f57b44!2sPEDRO%20CORDEIRO%20TATTOO!5e0!3m2!1spt-BR!2sbr!4v1751811502101!5m2!1spt-BR!2sbr" 
+                    class="w-full h-64" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localização do Estúdio">
+            </iframe>
           </div>
-          
-          <div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
-            <a href="https://wa.me/5511912345678" class="bg-primary text-white px-5 py-2 md:px-6 md:py-3 rounded-full font-bold hover:bg-red-700 transition flex items-center text-sm md:text-base">
-              <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-zinc-800/50 dark:bg-white/10 p-6 rounded-xl border border-zinc-700/30 dark:border-gray-200/20 hover:border-primary/50 transition group">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 group-hover:bg-primary/50 transition">
+                <i class="fas fa-phone-alt text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold">Telefone</h4>
+            </div>
+            <p class="text-gray-300 dark:text-gray-400 mb-3">(11) 1234-5678</p>
+            <a href="tel:+5511912345678" class="inline-flex items-center text-primary font-medium">
+              <span>Ligar agora</span>
+              <i class="fas fa-arrow-right ml-2 text-xs"></i>
             </a>
-            <a href="tel:+5511912345678" class="border-2 border-white dark:border-black px-5 py-2 md:px-6 md:py-3 rounded-full font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition flex items-center text-sm md:text-base">
-              <i class="fas fa-phone-alt mr-2"></i> Ligar
+          </div>
+
+          <div class="bg-zinc-800/50 dark:bg-white/10 p-6 rounded-xl border border-zinc-700/30 dark:border-gray-200/20 hover:border-primary/50 transition group">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 group-hover:bg-primary/50 transition">
+                <i class="fab fa-whatsapp text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold">WhatsApp</h4>
+            </div>
+            <p class="text-gray-300 dark:text-gray-400 mb-3">(11) 98221-7620</p>
+            <a href="https://wa.me/5511912345678" class="inline-flex items-center text-primary font-medium">
+              <span>Enviar mensagem</span>
+              <i class="fas fa-arrow-right ml-2 text-xs"></i>
+            </a>
+          </div>
+
+          <div class="bg-zinc-800/50 dark:bg-white/10 p-6 rounded-xl border border-zinc-700/30 dark:border-gray-200/20 hover:border-primary/50 transition group">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 group-hover:bg-primary/50 transition">
+                <i class="fas fa-envelope text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold">Email</h4>
+            </div>
+            <p class="text-gray-300 dark:text-gray-400 mb-3">pedrogc67@hotmail.com</p>
+            <a href="mailto:contato@pedrocordeirotattoo.com" class="inline-flex items-center text-primary font-medium">
+              <span>Enviar email</span>
+              <i class="fas fa-arrow-right ml-2 text-xs"></i>
+            </a>
+          </div>
+
+          <div class="bg-zinc-800/50 dark:bg-white/10 p-6 rounded-xl border border-zinc-700/30 dark:border-gray-200/20 hover:border-primary/50 transition group">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 group-hover:bg-primary/50 transition">
+                <i class="fas fa-clock text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold">Horário</h4>
+            </div>
+            <p class="text-gray-300 dark:text-gray-400 mb-3">Seg-Sex: 09h-19h<br>Sáb: 09h-18h</p>
+            <a href="#contact" class="inline-flex items-center text-primary font-medium">
+              <span>Ver exceções</span>
+              <i class="fas fa-arrow-right ml-2 text-xs"></i>
             </a>
           </div>
         </div>
-        
-        <div class="md:w-1/2 w-full">
-          <div class="bg-zinc-900 dark:bg-gray-100 p-6 md:p-8 rounded-xl shadow-lg">
-            <h3 class="text-xl md:text-2xl mb-4 md:mb-6 font-anton">Agende sua sessão</h3>
-            <form>
-              <div class="mb-3 md:mb-4">
-                <label for="name" class="block mb-1 md:mb-2 text-sm md:text-base">Nome Completo</label>
-                <input type="text" id="name" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base">
+      </div>
+
+      <!-- Contact Form -->
+      <div class="lg:w-1/2 w-full">
+        <div class="bg-zinc-800/50 dark:bg-white/10 p-8 rounded-2xl border border-zinc-700/30 dark:border-gray-200/20 hover:border-primary/50 transition shadow-2xl">
+          <h3 class="text-2xl font-anton mb-6">Agende Sua Consulta</h3>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block mb-2 font-medium">Nome Completo</label>
+                <input type="text" id="name" class="w-full px-4 py-3 bg-zinc-700/50 dark:bg-white/5 border border-zinc-600/50 dark:border-gray-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder-gray-400 dark:placeholder-gray-500 transition">
               </div>
-              
-              <div class="mb-3 md:mb-4">
-                <label for="email" class="block mb-1 md:mb-2 text-sm md:text-base">Email</label>
-                <input type="email" id="email" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base">
+              <div>
+                <label for="email" class="block mb-2 font-medium">Email</label>
+                <input type="email" id="email" class="w-full px-4 py-3 bg-zinc-700/50 dark:bg-white/5 border border-zinc-600/50 dark:border-gray-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder-gray-400 dark:placeholder-gray-500 transition">
               </div>
-              
-              <div class="mb-3 md:mb-4">
-                <label for="phone" class="block mb-1 md:mb-2 text-sm md:text-base">Telefone</label>
-                <input type="tel" id="phone" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="phone" class="block mb-2 font-medium">Telefone</label>
+                <input type="tel" id="phone" class="w-full px-4 py-3 bg-zinc-700/50 dark:bg-white/5 border border-zinc-600/50 dark:border-gray-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder-gray-400 dark:placeholder-gray-500 transition">
               </div>
-              
-              <div class="mb-3 md:mb-4">
-                <label for="style" class="block mb-1 md:mb-2 text-sm md:text-base">Estilo de Tatuagem</label>
-                <select id="style" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base">
+              <div>
+                <label for="style" class="block mb-2 font-medium">Estilo de Interesse</label>
+                <select id="style" class="w-full px-4 py-3 bg-zinc-700/50 dark:bg-white/5 border border-zinc-600/50 dark:border-gray-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-300 dark:text-gray-700 transition">
                   <option value="">Selecione um estilo</option>
                   <option value="fineline">Fineline</option>
                   <option value="blackwork">Blackwork</option>
-                  <option value="oldschool">Old School</option>
+                  <option value="geek">Geek Tattoo</option>
                   <option value="realism">Realismo</option>
                   <option value="other">Outro</option>
                 </select>
               </div>
-              
-              <div class="mb-3 md:mb-4">
-                <label for="message" class="block mb-1 md:mb-2 text-sm md:text-base">Descreva sua ideia</label>
-                <textarea id="message" rows="4" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base"></textarea>
-              </div>
-              
-              <button type="submit" class="w-full bg-primary text-white py-3 md:py-4 rounded-lg font-bold hover:bg-red-700 transition text-sm md:text-base">
-                Enviar Solicitação
-              </button>
-            </form>
+            </div>
+
+            <div>
+              <label for="message" class="block mb-2 font-medium">Descreva sua ideia</label>
+              <textarea id="message" rows="5" class="w-full px-4 py-3 bg-zinc-700/50 dark:bg-white/5 border border-zinc-600/50 dark:border-gray-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder-gray-400 dark:placeholder-gray-500 transition"></textarea>
+            </div>
+
+            <div class="flex items-center">
+              <input type="checkbox" id="consent" class="w-4 h-4 text-primary bg-zinc-700/50 border-zinc-600/50 rounded focus:ring-primary">
+              <label for="consent" class="ml-2 text-sm text-gray-300 dark:text-gray-400">Concordo com a política de privacidade</label>
+            </div>
+
+            <button type="submit" class="w-full bg-primary hover:bg-red-700 text-white py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-primary/20 flex items-center justify-center">
+              <i class="fas fa-paper-plane mr-2"></i> ENVIAR MENSAGEM
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section - Premium Version -->
+<section class="relative py-20 px-4 bg-black dark:bg-gray-800 overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('./landing-pedro-tattoo/tattoo-pattern.png')]"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 rounded-full bg-primary/10 filter blur-3xl"></div>
+  </div>
+
+  <div class="max-w-4xl mx-auto relative z-10 text-center">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-pricedown mb-6 text-white dark:text-white ready">
+      PRONTO PARA TRANSFORMAR SUA IDEIA EM ARTE?
+    </h2>
+    <p class="text-xl md:text-2xl font-pricedown mb-8 text-gray-300 dark:text-gray-300">
+      AGENDE UMA CONSULTA E VAMOS CRIAR ALGO ÚNICO JUNTOS
+    </p>
+    
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="https://wa.me/5511912345678" class="bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/30 flex items-center justify-center">
+        <i class="fab fa-whatsapp mr-3 text-xl"></i> WHATSAPP
+      </a>
+      <a href="#contact" class="border-2 border-white dark:border-gray-300 hover:bg-white hover:text-black dark:hover:bg-gray-300 dark:hover:text-gray-800 px-8 py-4 rounded-full text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+        <i class="fas fa-envelope mr-3 text-xl"></i> EMAIL
+      </a>
+      <a href="tel:+5511912345678" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+        <i class="fas fa-phone-alt mr-3 text-xl"></i> LIGAR
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer - Premium Version -->
+<footer class="relative bg-zinc-900 dark:bg-gray-900 py-16 px-4 overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute top-0 left-0 w-full h-full opacity-5">
+    <div class="absolute top-1/3 left-1/4 w-64 h-64 rounded-full bg-primary filter blur-3xl opacity-20"></div>
+    <div class="absolute bottom-1/4 right-1/3 w-64 h-64 rounded-full bg-yellow-500 filter blur-3xl opacity-20"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <!-- Logo/About -->
+      <div class="md:col-span-2">
+        <div class="flex items-center mb-4">
+          <div class="mr-3 flex items-center justify-center w-10 h-10 rounded-full bg-primary">
+            <i class="fas fa-bolt text-white"></i>
           </div>
+          <span class="text-2xl logo-text">PEDRO CORDEIRO TATTOO</span>
         </div>
-      </div>
-      
-      <div class="mt-8 md:mt-12 rounded-xl overflow-hidden shadow-2xl">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.2886086296317!2d-52.1147555257884!3d-21.769088398201884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9491994ee6894739%3A0x2a17e83562f57b44!2sPEDRO%20CORDEIRO%20TATTOO!5e0!3m2!1spt-BR!2sbr!4v1751811502101!5m2!1spt-BR!2sbr" 
-                width="100%" 
-                height="400" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Localização do Estúdio">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Instagram Section -->
-  <section class="bg-zinc-900 dark:bg-zinc-100 py-16 md:py-20 px-4 mobile-padding">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-8 md:mb-12">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-anton">Acompanhe nosso trabalho</h2>
-        <p class="text-base md:text-lg mb-4 md:mb-6">Siga-nos no Instagram para ver nossos últimos trabalhos e novidades.</p>
-        <a href="https://instagram.com/pedrocordeirotattoo" class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 py-2 md:px-6 md:py-3 rounded-full font-bold hover:opacity-90 transition text-sm md:text-base">
-          <i class="fab fa-instagram mr-2"></i> @pedrocordeirotattoo
-        </a>
-      </div>
-      
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
-        <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo1" 
-               class="w-full h-32 object-cover hover:opacity-90 transition"
-               loading="lazy"
-               width="300"
-               height="300"
-               alt="Instagram post">
-        </a>
-        <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo2" 
-               class="w-full h-32 object-cover hover:opacity-90 transition"
-               loading="lazy"
-               width="300"
-               height="300"
-               alt="Instagram post">
-        </a>
-        <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo3" 
-               class="w-full h-32 object-cover hover:opacity-90 transition"
-               loading="lazy"
-               width="300"
-               height="300"
-               alt="Instagram post">
-        </a>
-        <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo4" 
-               class="w-full h-32 object-cover hover:opacity-90 transition"
-               loading="lazy"
-               width="300"
-               height="300"
-               alt="Instagram post">
-        </a>
-        <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo5" 
-               class="w-full h-32 object-cover hover:opacity-90 transition"
-               loading="lazy"
-               width="300"
-               height="300"
-               alt="Instagram post">
-        </a>
-        <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo6" 
-               class="w-full h-32 object-cover hover:opacity-90 transition"
-               loading="lazy"
-               width="300"
-               height="300"
-               alt="Instagram post">
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="bg-black dark:bg-gray-200 py-12 md:py-16 px-4 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 font-pricedown">SEU CORPO MERECE ARTE COM PROPÓSITO</h2>
-      <p class="text-lg md:text-xl mb-6 md:mb-8 font-pricedown">PRONTO PARA ETERNIZAR UMA IDEIA NA PELE?</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
-        <a href="https://wa.me/5511912345678" class="bg-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
-          <i class="fab fa-whatsapp mr-2"></i> AGENDAR PELO WHATSAPP
-        </a>
-        <a href="#contact" class="border-2 border-white dark:border-black px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105 font-pricedown">
-          <i class="fas fa-envelope mr-2"></i> ENVIAR EMAIL
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-zinc-900 dark:bg-zinc-200 py-8 md:py-12 px-4">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-4 md:mb-0 text-center md:text-left">
-          <span class="text-xl md:text-2xl logo-text">PEDRO CORDEIRO TATTOO</span>
-          <p class="text-xs md:text-sm mt-1 md:mt-2 text-gray-400 dark:text-gray-600">Tatuagens que marcam por toda vida.</p>
-        </div>
-        
-        <div class="flex space-x-4 md:space-x-6 mb-4 md:mb-0">
-          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-lg md:text-xl">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-lg md:text-xl">
+        <p class="text-gray-400 dark:text-gray-400 mb-6">
+          Especializado em tatuagens personalizadas que contam histórias únicas. Combinando técnica, arte e segurança para resultados excepcionais.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 dark:bg-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-primary/10 transition">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-lg md:text-xl">
+          <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 dark:bg-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-primary/10 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 dark:bg-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-primary/10 transition">
             <i class="fab fa-tiktok"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-lg md:text-xl">
+          <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 dark:bg-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-primary/10 transition">
             <i class="fab fa-youtube"></i>
           </a>
         </div>
-        
-        <div class="text-center md:text-right">
-          <p class="text-xs md:text-sm text-gray-400 dark:text-gray-600">© 2023 Pedro Cordeiro Tattoo. Todos os direitos reservados.</p>
-          <div class="flex justify-center md:justify-end space-x-2 md:space-x-4 mt-1 md:mt-2">
-            <a href="#" class="text-xs hover:text-primary dark:hover:text-black">Termos</a>
-            <a href="#" class="text-xs hover:text-primary dark:hover:text-black">Privacidade</a>
-            <a href="#" class="text-xs hover:text-primary dark:hover:text-black">Cuidados</a>
-          </div>
-        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold text-white dark:text-white mb-4 uppercase">Links Rápidos</h3>
+        <ul class="space-y-3">
+          <li><a href="#about" class="text-gray-400 dark:text-gray-400 hover:text-primary transition">Sobre</a></li>
+          <li><a href="#styles" class="text-gray-400 dark:text-gray-400 hover:text-primary transition">Estilos</a></li>
+          <li><a href="#portfolio" class="text-gray-400 dark:text-gray-400 hover:text-primary transition">Portfólio</a></li>
+          <li><a href="#care" class="text-gray-400 dark:text-gray-400 hover:text-primary transition">Cuidados</a></li>
+          <li><a href="#contact" class="text-gray-400 dark:text-gray-400 hover:text-primary transition">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-bold text-white dark:text-white mb-4 uppercase">Contato</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <i class="fas fa-map-marker-alt text-primary mr-3 mt-1"></i>
+            <span class="text-gray-400 dark:text-gray-400">Avenida Presidente Vargas, 1119 Centro - Presidente Epitácio SP</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-phone-alt text-primary mr-3 mt-1"></i>
+            <span class="text-gray-400 dark:text-gray-400">(11) 98221-7620</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-envelope text-primary mr-3 mt-1"></i>
+            <span class="text-gray-400 dark:text-gray-400">pedrogc67@hotmail.com</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-clock text-primary mr-3 mt-1"></i>
+            <span class="text-gray-400 dark:text-gray-400">Seg-Sex: 09h-19h</span>
+          </li>
+        </ul>
       </div>
     </div>
-  </footer>
 
+    <!-- Divider -->
+    <div class="border-t border-zinc-800 dark:border-gray-800 my-12"></div>
+
+    <!-- Bottom Footer -->
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
+        © 2023 Pedro Cordeiro Tattoo. Todos os direitos reservados.
+      </p>
+      
+      <div class="flex space-x-6">
+        <a href="#" class="text-gray-500 dark:text-gray-500 hover:text-primary transition text-sm">Termos</a>
+        <a href="#" class="text-gray-500 dark:text-gray-500 hover:text-primary transition text-sm">Privacidade</a>
+        <a href="#" class="text-gray-500 dark:text-gray-500 hover:text-primary transition text-sm">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
   <!-- Lightbox melhorado -->
   <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
     <div class="relative max-w-4xl w-full">
