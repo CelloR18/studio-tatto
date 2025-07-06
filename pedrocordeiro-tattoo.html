@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro Cordeiro Tattoo | Tatuagens Personalizadas em São Paulo</title>
+  <meta name="description" content="Estúdio de tatuagem especializado em blackwork, fineline e designs personalizados. Agende sua sessão com Pedro Cordeiro em São Paulo.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#dc2626', // Red-600
+            secondary: '#1a1a1a',
+          },
+          fontFamily: {
+            anton: ['Anton', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-secondary text-white dark:bg-white dark:text-secondary font-inter">
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-black bg-opacity-90 dark:bg-white dark:bg-opacity-90 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center">
+          <span class="text-2xl font-anton text-primary">Pedro Tattoo | Por toda a vida</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="hover:text-primary transition">Sobre</a>
+          <a href="#styles" class="hover:text-primary transition">Estilos</a>
+          <a href="#portfolio" class="hover:text-primary transition">Portfólio</a>
+          <a href="#testimonials" class="hover:text-primary transition">Depoimentos</a>
+          <a href="#contact" class="hover:text-primary transition">Contato</a>
+          <button onclick="document.documentElement.classList.toggle('dark')" class="ml-4 p-2 rounded-full bg-gray-800 dark:bg-yellow-400 dark:text-black">
+            <i class="fas fa-moon dark:hidden"></i>
+            <i class="fas fa-sun hidden dark:block"></i>
+          </button>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-white dark:text-black">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black dark:bg-white py-4 px-4">
+      <div class="flex flex-col space-y-4">
+        <a href="#about" class="hover:text-primary transition">Sobre</a>
+        <a href="#styles" class="hover:text-primary transition">Estilos</a>
+        <a href="#portfolio" class="hover:text-primary transition">Portfólio</a>
+        <a href="#testimonials" class="hover:text-primary transition">Depoimentos</a>
+        <a href="#contact" class="hover:text-primary transition">Contato</a>
+        <button onclick="document.documentElement.classList.toggle('dark')" class="text-left hover:text-primary transition">
+          Alternar Modo Escuro
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center relative" style="background-image: url('./landing-pedro-tattoo/pedro-studio.webp')">
+    <div class="relative z-10 bg-black bg-opacity-70 p-8 rounded-xl dark:bg-white dark:bg-opacity-80 max-w-4xl mx-4">
+      <h1 class="text-4xl md:text-6xl mb-6 font-anton">Tatuagens que marcam mais do que a pele.</h1>
+      <p class="text-lg md:text-xl mb-8">Expressar quem você é nunca foi tão permanente — e tão autêntico.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://wa.me/5511912345678" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
+          <i class="fab fa-whatsapp mr-2"></i> Agendar pelo WhatsApp
+        </a>
+        <a href="#portfolio" class="border-2 border-white dark:border-black px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105">
+          Ver Portfólio
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="absolute bottom-10 animate-bounce">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-6xl mx-auto py-20 px-4">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        <img src="./landing-pedro-tattoo/pedroperfil.jpg" 
+             alt="Pedro Cordeiro trabalhando" 
+             class="rounded-xl shadow-2xl w-full h-auto object-cover">
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-3xl md:text-4xl mb-6 font-anton">Pedro Cordeiro,<br> tatuador por vocação.</h2>
+        <p class="text-lg mb-4">Com mais de "X" anos de experiência, Pedro transforma histórias em arte. Especializado em <strong class="text-primary">X</strong>, <strong class="text-primary">X</strong> e estilos personalizados, ele une técnica, criatividade e total cuidado com higiene.</p>
+        <p class="text-lg mb-6">Cada traço é pensado para ser único — assim como quem o carrega.</p>
+        
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div class="bg-zinc-800 dark:bg-gray-100 dark:text-black p-4 rounded-lg">
+            <div class="text-primary text-3xl mb-2">"X"+</div>
+            <div>Anos de Experiência</div>
+          </div>
+          <div class="bg-zinc-800 dark:bg-gray-100 dark:text-black p-4 rounded-lg">
+            <div class="text-primary text-3xl mb-2">"X"+</div>
+            <div>Tatuagens Realizadas</div>
+          </div>
+        </div>
+        
+        <a href="#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition">
+          Conhecer o Estúdio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Styles Section -->
+  <section id="styles" class="bg-zinc-900 dark:bg-zinc-100 py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl mb-4 font-anton">Encontre o estilo que fala por você.</h2>
+        <p class="text-lg max-w-2xl mx-auto">Cada estilo tem sua linguagem. Descubra qual combina com sua personalidade.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl transition hover:scale-105 duration-300 group">
+          <div class="text-primary text-4xl mb-4 group-hover:rotate-12 transition">🎨</div>
+          <h3 class="text-xl mb-3 font-bold">Fineline</h3>
+          <p class="text-gray-300 dark:text-gray-600">Traços finos, delicados e cheios de detalhes para tatuagens sutis e elegantes.</p>
+        </div>
+        
+        <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl transition hover:scale-105 duration-300 group">
+          <div class="text-primary text-4xl mb-4 group-hover:rotate-12 transition">🖤</div>
+          <h3 class="text-xl mb-3 font-bold">Blackwork</h3>
+          <p class="text-gray-300 dark:text-gray-600">Impacto e contraste em tattoos sólidas e marcantes que chamam atenção.</p>
+        </div>
+        
+        <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl transition hover:scale-105 duration-300 group">
+          <div class="text-primary text-4xl mb-4 group-hover:rotate-12 transition">🕰️</div>
+          <h3 class="text-xl mb-3 font-bold">GeeK Tattoo</h3>
+          <p class="text-gray-300 dark:text-gray-600">Representações de personagens de quadrinhos, animes filmes, jogos de video game ou desenhos.</p>
+        </div>
+        
+        <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl transition hover:scale-105 duration-300 group">
+          <div class="text-primary text-4xl mb-4 group-hover:rotate-12 transition">👁️</div>
+          <h3 class="text-xl mb-3 font-bold">Realismo</h3>
+          <p class="text-gray-300 dark:text-gray-600">Arte em alto nível, com sombras e profundidade que parecem saltar da pele.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl mb-4 font-anton">Cada tatuagem, uma história contada na pele.</h2>
+        <p class="text-lg max-w-2xl mx-auto">Explore nosso portfólio e inspire-se para sua próxima arte.</p>
+      </div>
+      
+      <!-- Portfolio Filter -->
+      <div class="flex justify-center mb-12">
+        <div class="inline-flex flex-wrap justify-center gap-2">
+          <button class="px-4 py-2 rounded-full bg-primary text-white">Todos</button>
+          <button class="px-4 py-2 rounded-full bg-zinc-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 transition">Fineline</button>
+          <button class="px-4 py-2 rounded-full bg-zinc-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 transition">Blackwork</button>
+          <button class="px-4 py-2 rounded-full bg-zinc-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 transition">Geek Tattoo</button>
+          <button class="px-4 py-2 rounded-full bg-zinc-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 transition">Realismo</button>
+        </div>
+      </div>
+      
+      <!-- Portfolio Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="https://source.unsplash.com/800x800/?tattoo,ink" class="portfolio-item group">
+          <img src="./landing-pedro-tattoo/fineline.png" 
+               class="rounded-xl w-full h-64 object-cover group-hover:opacity-90 transition" 
+               alt="Tatuagem fineline">
+          <div class="mt-2 text-sm text-gray-400">Fineline</div>
+        </a>
+        <a href="https://source.unsplash.com/800x800/?tattoo,bodyart" class="portfolio-item group">
+          <img src="./landing-pedro-tattoo/blackwork.png" 
+               class="rounded-xl w-full h-64 object-cover group-hover:opacity-90 transition" 
+               alt="Tatuagem blackwork">
+          <div class="mt-2 text-sm text-gray-400">Blackwork</div>
+        </a>
+        <a href="https://source.unsplash.com/800x800/?tattoo,design" class="portfolio-item group">
+          <img src="./landing-pedro-tattoo/pedro tattoo01.jpg" 
+               class="rounded-xl w-full h-64 object-cover group-hover:opacity-90 transition" 
+               alt="Tatuagem old school">
+          <div class="mt-2 text-sm text-gray-400">Geek Tatto</div>
+        </a>
+        <a href="https://source.unsplash.com/800x800/?tattoo,skin" class="portfolio-item group">
+          <img src="./landing-pedro-tattoo/realismo.png" 
+               class="rounded-xl w-full h-64 object-cover group-hover:opacity-90 transition" 
+               alt="Tatuagem realista">
+          <div class="mt-2 text-sm text-gray-400">Realismo</div>
+        </a>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="#" class="inline-block border-2 border-white dark:border-black px-6 py-3 rounded-full font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition">
+          Ver Portfólio Completo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-zinc-900 dark:bg-zinc-100 py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl mb-4 font-anton">O que dizem por aí...</h2>
+        <p class="text-lg">A satisfação dos nossos clientes é nossa maior recompensa.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-zinc-800 dark:bg-white dark:text-black p-8 rounded-xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full mr-4" alt="Lucas F.">
+            <div>
+              <h4 class="font-bold">Lucas F.</h4>
+              <div class="flex text-primary">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic mb-4">"Nunca me senti tão respeitado no processo. Pedro transformou minha ideia em algo muito melhor do que eu imaginava. O cuidado com higiene e atenção aos detalhes são impressionantes."</p>
+          <div class="text-sm text-gray-400 dark:text-gray-600">Tatuagem de dragão no braço - 2 sessões</div>
+        </div>
+        
+        <div class="bg-zinc-800 dark:bg-white dark:text-black p-8 rounded-xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4" alt="Marina T.">
+            <div>
+              <h4 class="font-bold">Marina T.</h4>
+              <div class="flex text-primary">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic mb-4">"Studio limpo, ambiente acolhedor e um artista de verdade. Pedro tem uma paciência incrível para explicar todo o processo. Minha tatuagem ficou perfeita e recebo elogios todos os dias!"</p>
+          <div class="text-sm text-gray-400 dark:text-gray-600">Tatuagem fineline floral - 3 horas</div>
+        </div>
+        
+        <div class="bg-zinc-800 dark:bg-white dark:text-black p-8 rounded-xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-12 h-12 rounded-full mr-4" alt="Diego M.">
+            <div>
+              <h4 class="font-bold">Diego M.</h4>
+              <div class="flex text-primary">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic mb-4">"Confiei de olhos fechados e o resultado foi impecável! Pedro é extremamente profissional e talentoso. Já estou planejando minha próxima tatuagem com ele."</p>
+          <div class="text-sm text-gray-400 dark:text-gray-600">Tatuagem blackwork geométrica - 2 sessões</div>
+        </div>
+        
+        <div class="bg-zinc-800 dark:bg-white dark:text-black p-8 rounded-xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full mr-4" alt="Ana C.">
+            <div>
+              <h4 class="font-bold">Ana C.</h4>
+              <div class="flex text-primary">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="italic mb-4">"Fiz minha primeira tatuagem com o Pedro e foi uma experiência incrível. Ele me guiou em cada passo, desde a escolha do design até os cuidados pós-tatuagem. Recomendo para todos!"</p>
+          <div class="text-sm text-gray-400 dark:text-gray-600">Tatuagem minimalista - 1.5 horas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="md:w-1/2">
+          <h2 class="text-3xl md:text-4xl mb-6 font-anton">Venha viver a experiência.</h2>
+          <p class="text-lg mb-8">Agende uma consulta para discutir sua ideia e transformá-la em uma obra de arte permanente.</p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start">
+              <div class="text-primary mr-4 mt-1">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Estúdio Por Toda Vida</h4>
+                <p>Avenida Presidente Vargas, 1119 - sala -  Centro<br>Presidente Epitácio/SP - CEP 19470-000</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="text-primary mr-4 mt-1">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Horário de Funcionamento</h4>
+                <p>Segunda a Sexta - 09h às 19h<br>Sabado - 09h às 18:00</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="text-primary mr-4 mt-1">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Contato</h4>
+                <p>WhatsApp: (11) 91234-5678<br>Email: contato@pedrocordeirotattoo.com</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href="https://wa.me/5511912345678" class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition flex items-center">
+              <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+            </a>
+            <a href="tel:+5511912345678" class="border-2 border-white dark:border-black px-6 py-3 rounded-full font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition flex items-center">
+              <i class="fas fa-phone-alt mr-2"></i> Ligar
+            </a>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2">
+          <div class="bg-zinc-900 dark:bg-gray-100 p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl mb-6 font-anton">Agende sua sessão</h3>
+            <form>
+              <div class="mb-4">
+                <label for="name" class="block mb-2">Nome Completo</label>
+                <input type="text" id="name" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              </div>
+              
+              <div class="mb-4">
+                <label for="email" class="block mb-2">Email</label>
+                <input type="email" id="email" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              </div>
+              
+              <div class="mb-4">
+                <label for="phone" class="block mb-2">Telefone</label>
+                <input type="tel" id="phone" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              </div>
+              
+              <div class="mb-4">
+                <label for="style" class="block mb-2">Estilo de Tatuagem</label>
+                <select id="style" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                  <option value="">Selecione um estilo</option>
+                  <option value="fineline">Fineline</option>
+                  <option value="blackwork">Blackwork</option>
+                  <option value="oldschool">Old School</option>
+                  <option value="realism">Realismo</option>
+                  <option value="other">Outro</option>
+                </select>
+              </div>
+              
+              <div class="mb-4">
+                <label for="message" class="block mb-2">Descreva sua ideia</label>
+                <textarea id="message" rows="4" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+              </div>
+              
+              <button type="submit" class="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-red-700 transition">
+                Enviar Solicitação
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 rounded-xl overflow-hidden shadow-2xl">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.2886086296317!2d-52.1147555257884!3d-21.769088398201884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9491994ee6894739%3A0x2a17e83562f57b44!2sPEDRO%20CORDEIRO%20TATTOO!5e0!3m2!1spt-BR!2sbr!4v1751811502101!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Section -->
+  <section class="bg-zinc-900 dark:bg-zinc-100 py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl mb-4 font-anton">Acompanhe nosso trabalho</h2>
+        <p class="text-lg mb-6">Siga-nos no Instagram para ver nossos últimos trabalhos e novidades.</p>
+        <a href="https://instagram.com/pedrocordeirotattoo" class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-bold hover:opacity-90 transition">
+          <i class="fab fa-instagram mr-2 text-xl"></i> @pedrocordeirotattoo
+        </a>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+        <a href="#" class="instagram-post">
+          <img src="https://source.unsplash.com/300x300/?tattoo1" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+        </a>
+        <a href="#" class="instagram-post">
+          <img src="https://source.unsplash.com/300x300/?tattoo2" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+        </a>
+        <a href="#" class="instagram-post">
+          <img src="https://source.unsplash.com/300x300/?tattoo3" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+        </a>
+        <a href="#" class="instagram-post">
+          <img src="https://source.unsplash.com/300x300/?tattoo4" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+        </a>
+        <a href="#" class="instagram-post">
+          <img src="https://source.unsplash.com/300x300/?tattoo5" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+        </a>
+        <a href="#" class="instagram-post">
+          <img src="https://source.unsplash.com/300x300/?tattoo6" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-black dark:bg-gray-200 py-16 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl mb-6 font-anton">Seu corpo merece arte com propósito.</h2>
+      <p class="text-xl mb-8">Pronto para eternizar uma ideia na pele? Fale com Pedro e agende uma sessão exclusiva.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://wa.me/5511912345678" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
+          <i class="fab fa-whatsapp mr-2"></i> Agendar pelo WhatsApp
+        </a>
+        <a href="#contact" class="border-2 border-white dark:border-black px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105">
+          <i class="fas fa-envelope mr-2"></i> Enviar Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-900 dark:bg-zinc-200 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <span class="text-2xl font-anton text-primary">PEDRO CORDEIRO TATTOO</span>
+          <p class="text-sm mt-2 text-gray-400 dark:text-gray-600">Tatuagens que marcam por toda vida.</p>
+        </div>
+        
+        <div class="flex space-x-6 mb-6 md:mb-0">
+          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-xl">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-xl">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-xl">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-xl">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        
+        <div class="text-center md:text-right">
+          <p class="text-sm text-gray-400 dark:text-gray-600">© 2023 Pedro Cordeiro Tattoo. Todos os direitos reservados.</p>
+          <div class="flex justify-center md:justify-end space-x-4 mt-2">
+            <a href="#" class="text-xs text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black">Termos de Serviço</a>
+            <a href="#" class="text-xs text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black">Política de Privacidade</a>
+            <a href="#" class="text-xs text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black">Cuidados Pós-Tatuagem</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full">
+      <button id="close-lightbox" class="absolute -top-12 right-0 text-white text-3xl hover:text-primary">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="lightbox-img" src="" class="w-full max-h-[80vh] object-contain" alt="">
+      <div id="lightbox-caption" class="text-white text-center mt-4"></div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Lightbox functionality
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeLightbox = document.getElementById('close-lightbox');
+
+    portfolioItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const imgSrc = this.getAttribute('href');
+        const caption = this.querySelector('div').textContent;
+        
+        lightboxImg.setAttribute('src', imgSrc);
+        lightboxCaption.textContent = caption;
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeLightbox.addEventListener('click', function() {
+      lightbox.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
+
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
