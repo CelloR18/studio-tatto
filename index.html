@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pedro Cordeiro Tattoo | Tatuagens Personalizadas em São Paulo</title>
   <meta name="description" content="Estúdio de tatuagem especializado em blackwork, fineline e designs personalizados. Agende sua sessão com Pedro Cordeiro em São Paulo.">
+  
+  <!-- Pré-conexão para recursos externos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.cdnfonts.com">
+  
+  <!-- Pré-carregar fontes críticas -->
+  <link rel="preload" href="https://fonts.cdnfonts.com/css/pricedown" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+  
+  <!-- CSS otimizado -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -12,7 +24,7 @@
       theme: {
         extend: {
           colors: {
-            primary: '#dc2626', // Red-600
+            primary: '#dc2626',
             secondary: '#1a1a1a',
           },
           fontFamily: {
@@ -21,352 +33,1011 @@
             inter: ['Inter', 'sans-serif'],
           }
         }
+      },
+      corePlugins: {
+        aspectRatio: false, // Desabilitar se não for usar
       }
     };
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Fontes com fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pricedown">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Pré-carregar imagens críticas -->
+  <link rel="preload" href="./landing-pedro-tattoo/pedro-studio.webp" as="image">
+  <link rel="preload" href="./landing-pedro-tattoo/pedroperfil.jpg" as="image">
+  
+  <!-- CSS inline crítico -->
+  <style>
+    /* Otimização de renderização */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Estilo para o logo com borda */
+    .logo-text {
+      font-family: 'Pricedown', sans-serif;
+      color: #000000;
+      text-shadow: 
+        -1px -1px 0 #fff,  
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+      letter-spacing: 1px;
+    }
+    h1{
+      font-family: 'Pricedown', sans-serif;
+      color: #fff;
+      text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+      letter-spacing: 1px;
+    }
+    
+    /* Otimização de imagens */
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+      font-style: italic;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* Melhorias para lightbox */
+    #lightbox {
+      backdrop-filter: blur(5px);
+    }
+    
+    #lightbox-img {
+      max-height: 90vh;
+      max-width: 90vw;
+    }
+    
+    /* Transições suaves */
+    a, button {
+      transition: all 0.3s ease;
+    }
+    
+    /* Melhorias para mobile */
+    @media (max-width: 768px) {
+      .mobile-stack {
+        flex-direction: column;
+      }
+      .mobile-padding {
+        padding: 1.5rem 1rem;
+      }
+      .mobile-text-center {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body class="bg-secondary text-white dark:bg-white dark:text-secondary font-inter">
-  <!-- Navigation -->
-  <nav class="fixed w-full bg-black bg-opacity-90 dark:bg-white dark:bg-opacity-90 z-50 shadow-lg">
+ <!-- Header/Navigation - Premium Version -->
+<header class="fixed w-full z-50">
+  <!-- Top Announcement Bar -->
+  <div class="bg-primary text-white text-center py-2 px-4 text-sm md:text-base">
+    <div class="container mx-auto flex items-center justify-center">
+      <span class="animate-pulse mr-2">✸</span>
+      <span>AGENDAMENTOS ABERTOS PARA DEZEMBRO - VAGAS LIMITADAS</span>
+      <a href="https://wa.me/5511912345678" class="ml-3 font-bold underline hover:no-underline">AGENDE JÁ!</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="bg-black/90 dark:bg-white/90 backdrop-blur-md shadow-lg transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
+      <div class="flex justify-between h-20 items-center">
+        <!-- Logo -->
         <div class="flex items-center">
-          <span class="text-2xl font-pricedown text-primary">Pedro Tattoo | Por toda a vida</span>
+          <a href="#" class="flex items-center group">
+            <div class="mr-3 flex items-center justify-center w-10 h-10 rounded-full bg-primary group-hover:rotate-12 transition">
+              <i class="fas fa-bolt text-white"></i>
+            </div>
+            <span class="text-2xl logo-text group-hover:text-primary transition">PEDRO CORDEIRO | TATTOO</span>
+          </a>
         </div>
+
+        <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#about" class="hover:text-primary transition font-pricedown">SOBRE</a>
-          <a href="#styles" class="hover:text-primary transition font-pricedown">ESTILOS</a>
-          <a href="#portfolio" class="hover:text-primary transition font-pricedown">PORTFÓLIO</a>
-          <a href="#care" class="hover:text-primary transition font-pricedown">CUIDADOS</a>
-          <a href="#contact" class="hover:text-primary transition font-pricedown">CONTATO</a>
-          <button onclick="document.documentElement.classList.toggle('dark')" class="ml-4 p-2 rounded-full bg-gray-800 dark:bg-yellow-400 dark:text-black">
+          <a href="#about" class="nav-link relative group">
+            <span class="flex items-center">
+              <i class="fas fa-user mr-2 text-primary opacity-0 group-hover:opacity-100 transition"></i>
+              SOBRE
+            </span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#styles" class="nav-link relative group">
+            <span class="flex items-center">
+              <i class="fas fa-palette mr-2 text-primary opacity-0 group-hover:opacity-100 transition"></i>
+              ESTILOS
+            </span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#portfolio" class="nav-link relative group">
+            <span class="flex items-center">
+              <i class="fas fa-images mr-2 text-primary opacity-0 group-hover:opacity-100 transition"></i>
+              PORTFÓLIO
+            </span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#care" class="nav-link relative group">
+            <span class="flex items-center">
+              <i class="fas fa-heart mr-2 text-primary opacity-0 group-hover:opacity-100 transition"></i>
+              CUIDADOS
+            </span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#contact" class="nav-link relative group">
+            <span class="flex items-center">
+              <i class="fas fa-envelope mr-2 text-primary opacity-0 group-hover:opacity-100 transition"></i>
+              CONTATO
+            </span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+          </a>
+          
+          <!-- Dark Mode Toggle -->
+          <button onclick="document.documentElement.classList.toggle('dark')" class="ml-4 p-2 rounded-full bg-gray-800 dark:bg-yellow-400 dark:text-black hover:scale-110 transition transform hover:rotate-12">
             <i class="fas fa-moon dark:hidden"></i>
             <i class="fas fa-sun hidden dark:block"></i>
           </button>
+          
+          <!-- CTA Button -->
+          <a href="https://wa.me/5511912345678" class="ml-4 bg-primary hover:bg-red-700 text-white px-4 py-2 rounded-full font-bold transition transform hover:scale-105 flex items-center">
+            <i class="fab fa-whatsapp mr-2"></i> AGENDAR
+          </a>
         </div>
+
+        <!-- Mobile Menu Button -->
         <div class="md:hidden flex items-center">
-          <button id="menu-btn" class="text-white dark:text-black">
-            <i class="fas fa-bars text-2xl"></i>
+          <button id="menu-btn" class="text-white dark:text-black p-2 focus:outline-none">
+            <i class="fas fa-bars text-2xl transition transform hover:rotate-90"></i>
           </button>
         </div>
-      </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black dark:bg-white py-4 px-4">
-      <div class="flex flex-col space-y-4 font-pricedown">
-        <a href="#about" class="hover:text-primary transition">SOBRE</a>
-        <a href="#styles" class="hover:text-primary transition">ESTILOS</a>
-        <a href="#portfolio" class="hover:text-primary transition">PORTFÓLIO</a>
-        <a href="#care" class="hover:text-primary transition">CUIDADOS</a>
-        <a href="#contact" class="hover:text-primary transition">CONTATO</a>
-        <button onclick="document.documentElement.classList.toggle('dark')" class="text-left hover:text-primary transition">
-          Alternar Modo
-        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center relative" style="background-image: url('./landing-pedro-tattoo/pedro-studio.webp')">
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="relative z-10 bg-black bg-opacity-70 p-8 rounded-xl dark:bg-white dark:bg-opacity-80 max-w-4xl mx-4">
-      <h1 class="text-4xl md:text-6xl mb-6 font-pricedown leading-tight">TATUAGENS QUE MARCAM MAIS DO QUE A PELE</h1>
-      <p class="text-lg md:text-2xl mb-8 font-pricedown">EXPRESSE QUEM VOCÊ É DE FORMA PERMANENTE</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://wa.me/5511912345678" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
-          <i class="fab fa-whatsapp mr-2"></i> AGENDAR PELO WHATSAPP
-        </a>
-        <a href="#portfolio" class="border-2 border-white dark:border-black px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105 font-pricedown">
-          VER PORTFÓLIO
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black/95 dark:bg-white/95 backdrop-blur-md py-4 px-4 shadow-xl">
+    <div class="flex flex-col space-y-6 font-medium text-lg">
+      <a href="#about" class="nav-link-mobile group">
+        <i class="fas fa-user mr-3 text-primary w-5 text-center"></i>
+        SOBRE
+        <i class="fas fa-chevron-right ml-auto text-primary opacity-0 group-hover:opacity-100 transition"></i>
+      </a>
+      <a href="#styles" class="nav-link-mobile group">
+        <i class="fas fa-palette mr-3 text-primary w-5 text-center"></i>
+        ESTILOS
+        <i class="fas fa-chevron-right ml-auto text-primary opacity-0 group-hover:opacity-100 transition"></i>
+      </a>
+      <a href="#portfolio" class="nav-link-mobile group">
+        <i class="fas fa-images mr-3 text-primary w-5 text-center"></i>
+        PORTFÓLIO
+        <i class="fas fa-chevron-right ml-auto text-primary opacity-0 group-hover:opacity-100 transition"></i>
+      </a>
+      <a href="#care" class="nav-link-mobile group">
+        <i class="fas fa-heart mr-3 text-primary w-5 text-center"></i>
+        CUIDADOS
+        <i class="fas fa-chevron-right ml-auto text-primary opacity-0 group-hover:opacity-100 transition"></i>
+      </a>
+      <a href="#contact" class="nav-link-mobile group">
+        <i class="fas fa-envelope mr-3 text-primary w-5 text-center"></i>
+        CONTATO
+        <i class="fas fa-chevron-right ml-auto text-primary opacity-0 group-hover:opacity-100 transition"></i>
+      </a>
+      
+      <div class="pt-4 border-t border-gray-700 dark:border-gray-300">
+        <button onclick="document.documentElement.classList.toggle('dark')" class="w-full flex items-center justify-between py-2">
+          <span class="flex items-center">
+            <i class="fas fa-adjust mr-3 text-primary w-5 text-center"></i>
+            TEMA
+          </span>
+          <i class="fas fa-toggle-off dark:hidden"></i>
+          <i class="fas fa-toggle-on hidden dark:block text-primary"></i>
+        </button>
+        
+        <a href="https://wa.me/5511912345678" class="mt-2 bg-primary hover:bg-red-700 text-white px-4 py-3 rounded-full font-bold transition flex items-center justify-center">
+          <i class="fab fa-whatsapp mr-2"></i> AGENDAR VIA WHATSAPP
         </a>
       </div>
     </div>
-    <a href="#about" class="absolute bottom-10 animate-bounce">
-      <i class="fas fa-chevron-down text-2xl"></i>
-    </a>
-  </section>
+  </div>
+</header>
 
-  <!-- About Section -->
-  <section id="about" class="max-w-6xl mx-auto py-20 px-4">
-    <div class="flex flex-col md:flex-row items-center gap-12">
-      <div class="md:w-1/2">
-        <img src="./landing-pedro-tattoo/pedroperfil.jpg" 
-             alt="Pedro Cordeiro trabalhando" 
-             class="rounded-xl shadow-2xl w-full h-auto object-cover">
+<style>
+  /* Custom styles for the premium header */
+  .nav-link {
+    @apply text-white dark:text-black hover:text-primary transition-colors duration-300 font-medium;
+  }
+  
+  .nav-link-mobile {
+    @apply text-white dark:text-black hover:text-primary transition-colors duration-300 flex items-center py-2 px-3 rounded-lg hover:bg-white/10 dark:hover:bg-black/10;
+  }
+  
+  .logo-text {
+    font-family: 'Pricedown', sans-serif;
+    @apply text-white dark:text-black text-2xl tracking-tight;
+    text-shadow: 
+      -1px -1px 0 rgba(0,0,0,0.3),  
+      1px -1px 0 rgba(0,0,0,0.3),
+      -1px 1px 0 rgba(0,0,0,0.3),
+      1px 1px 0 rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+    @apply transition-colors duration-300;
+  }
+</style>
+
+<script>
+  // Mobile Menu Toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.innerHTML = mobileMenu.classList.contains('hidden') ? 
+        '<i class="fas fa-bars text-2xl"></i>' : 
+        '<i class="fas fa-times text-2xl"></i>';
+    });
+    
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+      });
+    });
+  });
+</script>
+
+  <!-- About Section - Premium Version -->
+<section id="about" class="relative py-24 px-4 overflow-hidden">
+  <!-- Background elements -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-[url('./landing-pedro-tattoo/tattoo-pattern.png')] opacity-5 dark:opacity-[0.03]"></div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-secondary to-transparent dark:from-white"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <!-- Section header with decorative elements -->
+    <div class="text-center mb-16 relative">
+      <div class="inline-flex items-center justify-center mb-6">
+        <span class="h-px w-16 bg-primary mr-4"></span>
+        <span class="text-primary font-pricedown tracking-widest">O ARTISTA</span>
+        <span class="h-px w-16 bg-primary ml-4"></span>
       </div>
-      <div class="md:w-1/2">
-        <h2 class="text-3xl md:text-4xl mb-6 font-anton">Pedro Cordeiro,<br> tatuador por vocação.</h2>
-        <p class="text-lg mb-4">Com mais de "X" anos de experiência, Pedro transforma histórias em arte. Especializado em <strong class="text-primary">X</strong>, <strong class="text-primary">X</strong> e estilos personalizados, ele une técnica, criatividade e total cuidado com higiene.</p>
-        <p class="text-lg mb-6">Cada traço é pensado para ser único — assim como quem o carrega.</p>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-anton mb-4">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-500">Pedro Cordeiro</span>
+      </h2>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-300 dark:text-gray-600">
+        Transformando histórias em arte permanente com técnica e paixão
+      </p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <!-- Image with decorative frame -->
+      <div class="lg:w-1/2 w-full relative group">
+        <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+          <img src="./landing-pedro-tattoo/pedroperfil.jpg" 
+               alt="Pedro Cordeiro trabalhando" 
+               class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700"
+               loading="lazy"
+               width="600"
+               height="800">
+          <div class="absolute inset-0 border-8 border-white/20 pointer-events-none"></div>
+        </div>
+        <div class="absolute -z-10 inset-0 border-2 border-primary rounded-2xl translate-x-6 translate-y-6 group-hover:translate-x-5 group-hover:translate-y-5 transition duration-300"></div>
         
-        <div class="grid grid-cols-2 gap-4 mb-8">
-          <div class="bg-zinc-800 dark:bg-gray-100 dark:text-black p-4 rounded-lg">
-            <div class="text-primary text-3xl mb-2">"X"+</div>
-            <div>Anos de Experiência</div>
+        <!-- Signature badge -->
+        <div class="absolute -bottom-6 -right-6 bg-black dark:bg-white px-6 py-3 rounded-full shadow-lg flex items-center">
+          <span class="text-primary text-2xl mr-2">✍️</span>
+          <span class="font-pricedown text-white dark:text-black">Assinatura Artística</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="lg:w-1/2 w-full space-y-8">
+        <!-- Introduction -->
+        <div class="prose prose-invert dark:prose-dark max-w-none">
+          <p class="text-lg md:text-xl leading-relaxed">
+            Com mais de <span class="text-primary font-bold">X anos</span> de experiência no mundo da tatuagem, Pedro Cordeiro desenvolveu um estilo único que combina <span class="text-primary font-bold">precisão técnica</span> com <span class="text-primary font-bold">expressão artística</span>.
+          </p>
+          <p class="text-lg md:text-xl leading-relaxed">
+            Especialista em <span class="text-primary font-bold">X</span> e <span class="text-primary font-bold">X</span>, Pedro acredita que cada tatuagem deve ser tão única quanto a pessoa que a carrega. Seu processo criativo envolve entender profundamente a história por trás de cada peça.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-zinc-800/50 dark:bg-white/80 dark:text-black p-4 rounded-xl text-center border border-zinc-700/50 dark:border-gray-200/50 hover:border-primary/50 transition">
+            <div class="text-primary text-3xl md:text-4xl font-anton mb-1">X+</div>
+            <div class="text-sm md:text-base font-medium">Anos de Experiência</div>
           </div>
-          <div class="bg-zinc-800 dark:bg-gray-100 dark:text-black p-4 rounded-lg">
-            <div class="text-primary text-3xl mb-2">"X"+</div>
-            <div>Tatuagens Realizadas</div>
+          <div class="bg-zinc-800/50 dark:bg-white/80 dark:text-black p-4 rounded-xl text-center border border-zinc-700/50 dark:border-gray-200/50 hover:border-primary/50 transition">
+            <div class="text-primary text-3xl md:text-4xl font-anton mb-1">X+</div>
+            <div class="text-sm md:text-base font-medium">Clientes Satisfeitos</div>
+          </div>
+          <div class="bg-zinc-800/50 dark:bg-white/80 dark:text-black p-4 rounded-xl text-center border border-zinc-700/50 dark:border-gray-200/50 hover:border-primary/50 transition">
+            <div class="text-primary text-3xl md:text-4xl font-anton mb-1">X</div>
+            <div class="text-sm md:text-base font-medium">Prêmios Conquistados</div>
+          </div>
+          <div class="bg-zinc-800/50 dark:bg-white/80 dark:text-black p-4 rounded-xl text-center border border-zinc-700/50 dark:border-gray-200/50 hover:border-primary/50 transition">
+            <div class="text-primary text-3xl md:text-4xl font-anton mb-1">100%</div>
+            <div class="text-sm md:text-base font-medium">Higiene Garantida</div>
           </div>
         </div>
-        
-        <a href="#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition">
-          Conhecer o Estúdio
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Styles Section -->
-  <section id="styles" class="bg-zinc-900 dark:bg-zinc-100 py-20 px-4">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl mb-4 font-anton">Encontre o estilo que fala por você.</h2>
-        <p class="text-lg max-w-2xl mx-auto">Cada estilo tem sua linguagem. Descubra qual combina com sua personalidade.</p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl transition hover:scale-105 duration-300 group">
-          <div class="text-primary text-4xl mb-4 group-hover:rotate-12 transition">🎨</div>
-          <h3 class="text-xl mb-3 font-bold">Fineline</h3>
-          <p class="text-gray-300 dark:text-gray-600">Traços finos, delicados e cheios de detalhes para tatuagens sutis e elegantes.</p>
+        <!-- Philosophy -->
+        <div class="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-xl border-l-4 border-primary">
+          <h3 class="text-xl md:text-2xl font-anton mb-3 flex items-center">
+            <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3">!</span>
+            Filosofia de Trabalho
+          </h3>
+          <p class="text-gray-300 dark:text-gray-600">
+            "Minha abordagem vai além da técnica - é sobre criar uma conexão real com cada cliente. Acredito que uma tatuagem deve ser uma extensão natural da pessoa, não apenas um desenho na pele. Por isso, dedico tempo para entender suas histórias, personalidade e visão antes de qualquer traço."
+          </p>
         </div>
-        
-        <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl transition hover:scale-105 duration-300 group">
-          <div class="text-primary text-4xl mb-4 group-hover:rotate-12 transition">🖤</div>
-          <h3 class="text-xl mb-3 font-bold">Blackwork</h3>
-          <p class="text-gray-300 dark:text-gray-600">Impacto e contraste em tattoos sólidas e marcantes que chamam atenção.</p>
-        </div>
-        
-        <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl transition hover:scale-105 duration-300 group">
-          <div class="text-primary text-4xl mb-4 group-hover:rotate-12 transition">🕰️</div>
-          <h3 class="text-xl mb-3 font-bold">GeeK Tattoo</h3>
-          <p class="text-gray-300 dark:text-gray-600">Representações de personagens de quadrinhos, animes filmes, jogos de video game ou desenhos.</p>
-        </div>
-        
-        <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl transition hover:scale-105 duration-300 group">
-          <div class="text-primary text-4xl mb-4 group-hover:rotate-12 transition">👁️</div>
-          <h3 class="text-xl mb-3 font-bold">Realismo</h3>
-          <p class="text-gray-300 dark:text-gray-600">Arte em alto nível, com sombras e profundidade que parecem saltar da pele.</p>
+
+        <!-- CTA -->
+        <div class="flex flex-wrap gap-4">
+          <a href="#portfolio" class="flex-1 min-w-[200px] bg-primary hover:bg-red-700 text-white px-6 py-3 rounded-full font-bold transition flex items-center justify-center text-center">
+            <i class="fas fa-images mr-2"></i> Ver Portfólio
+          </a>
+          <a href="#contact" class="flex-1 min-w-[200px] border-2 border-white dark:border-black hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white px-6 py-3 rounded-full font-bold transition flex items-center justify-center text-center">
+            <i class="fas fa-calendar-check mr-2"></i> Agendar Consulta
+          </a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Portfolio Section -->
- <!-- Portfolio Section -->
-  <section id="portfolio" class="py-20 px-4">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl mb-4 font-anton">Cada tatuagem, uma história contada na pele.</h2>
-        <p class="text-lg max-w-2xl mx-auto">Explore nosso portfólio e inspire-se para sua próxima arte.</p>
-      </div>
-      
-      <!-- Portfolio Filter -->
-      <div class="flex justify-center mb-12">
-        <div class="inline-flex flex-wrap justify-center gap-2">
-          <button class="px-4 py-2 rounded-full bg-primary text-white">Todos</button>
-          <button class="px-4 py-2 rounded-full bg-zinc-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 transition">Fineline</button>
-          <button class="px-4 py-2 rounded-full bg-zinc-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 transition">Blackwork</button>
-          <button class="px-4 py-2 rounded-full bg-zinc-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 transition">Geek Tattoo</button>
-          <button class="px-4 py-2 rounded-full bg-zinc-800 dark:bg-gray-200 hover:bg-gray-700 dark:hover:bg-gray-300 transition">Realismo</button>
+    <!-- Certification Badges -->
+    <div class="mt-16 flex flex-wrap justify-center gap-6">
+      <div class="flex items-center bg-zinc-800/50 dark:bg-white/80 px-4 py-2 rounded-full border border-zinc-700/30 dark:border-gray-200/30">
+        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white mr-2">
+          <i class="fas fa-certificate text-xs"></i>
         </div>
+        <span class="text-sm md:text-base">Certificado em Higiene</span>
       </div>
-      
-      <!-- Portfolio Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <a href="https://source.unsplash.com/800x800/?tattoo,ink" class="portfolio-item group">
+      <div class="flex items-center bg-zinc-800/50 dark:bg-white/80 px-4 py-2 rounded-full border border-zinc-700/30 dark:border-gray-200/30">
+        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white mr-2">
+          <i class="fas fa-award text-xs"></i>
+        </div>
+        <span class="text-sm md:text-base">Melhor Blackwork 2022</span>
+      </div>
+      <div class="flex items-center bg-zinc-800/50 dark:bg-white/80 px-4 py-2 rounded-full border border-zinc-700/30 dark:border-gray-200/30">
+        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white mr-2">
+          <i class="fas fa-globe-americas text-xs"></i>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Portfolio Section - Premium Version -->
+<section id="portfolio" class="relative py-24 px-4 bg-zinc-950/50 dark:bg-white/5 overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute inset-0 z-0 opacity-10">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-primary rounded-full filter blur-3xl opacity-20 mix-blend-multiply"></div>
+    <div class="absolute bottom-0 right-0 w-64 h-64 bg-yellow-500 rounded-full filter blur-3xl opacity-20 mix-blend-multiply"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center justify-center mb-6">
+        <span class="h-px w-16 bg-primary mr-4"></span>
+        <span class="text-primary font-pricedown tracking-widest">GALERIA</span>
+        <span class="h-px w-16 bg-primary ml-4"></span>
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-anton mb-4">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-500">Arte em Pele</span>
+      </h2>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-300 dark:text-gray-600">
+        Cada tatuagem conta uma história única - explore nossa coleção de trabalhos
+      </p>
+    </div>
+
+    <!-- Portfolio Filter -->
+    <div class="flex justify-center mb-12">
+      <div class="inline-flex flex-wrap justify-center gap-2 p-1 bg-zinc-800/50 dark:bg-white/10 rounded-full border border-zinc-700/30 dark:border-gray-200/20">
+        <button class="px-4 py-2 rounded-full bg-primary text-white text-sm md:text-base font-medium hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
+          <i class="fas fa-star mr-2"></i> Todos
+        </button>
+        <button class="px-4 py-2 rounded-full bg-transparent hover:bg-zinc-700/50 dark:hover:bg-white/20 text-gray-300 dark:text-gray-400 text-sm md:text-base font-medium transition-all duration-300 transform hover:scale-105">
+          <i class="fas fa-pen-nib mr-2"></i> Fineline
+        </button>
+        <button class="px-4 py-2 rounded-full bg-transparent hover:bg-zinc-700/50 dark:hover:bg-white/20 text-gray-300 dark:text-gray-400 text-sm md:text-base font-medium transition-all duration-300 transform hover:scale-105">
+          <i class="fas fa-moon mr-2"></i> Blackwork
+        </button>
+        <button class="px-4 py-2 rounded-full bg-transparent hover:bg-zinc-700/50 dark:hover:bg-white/20 text-gray-300 dark:text-gray-400 text-sm md:text-base font-medium transition-all duration-300 transform hover:scale-105">
+          <i class="fas fa-gamepad mr-2"></i> Geek
+        </button>
+        <button class="px-4 py-2 rounded-full bg-transparent hover:bg-zinc-700/50 dark:hover:bg-white/20 text-gray-300 dark:text-gray-400 text-sm md:text-base font-medium transition-all duration-300 transform hover:scale-105">
+          <i class="fas fa-eye mr-2"></i> Realismo
+        </button>
+      </div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <!-- Portfolio Item 1 -->
+      <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500">
+        <div class="relative overflow-hidden">
           <img src="./landing-pedro-tattoo/fineline.png" 
-               class="rounded-xl w-full h-64 object-cover group-hover:opacity-90 transition" 
+               class="w-full h-80 md:h-96 object-cover transform group-hover:scale-110 transition duration-700"
+               loading="lazy"
+               width="400"
+               height="400"
                alt="Tatuagem fineline">
-          <div class="mt-2 text-sm text-gray-400">Fineline</div>
-        </a>
-        <a href="https://source.unsplash.com/800x800/?tattoo,bodyart" class="portfolio-item group">
-          <img src="./landing-pedro-tattoo/blackwork.png" 
-               class="rounded-xl w-full h-64 object-cover group-hover:opacity-90 transition" 
-               alt="Tatuagem blackwork">
-          <div class="mt-2 text-sm text-gray-400">Blackwork</div>
-        </a>
-        <a href="https://source.unsplash.com/800x800/?tattoo,design" class="portfolio-item group">
-          <img src="./landing-pedro-tattoo/pedro tattoo01.jpg" 
-               class="rounded-xl w-full h-64 object-cover group-hover:opacity-90 transition" 
-               alt="Tatuagem old school">
-          <div class="mt-2 text-sm text-gray-400">Geek Tatto</div>
-        </a>
-        <a href="https://source.unsplash.com/800x800/?tattoo,skin" class="portfolio-item group">
-          <img src="./landing-pedro-tattoo/realismo.png" 
-               class="rounded-xl w-full h-64 object-cover group-hover:opacity-90 transition" 
-               alt="Tatuagem realista">
-          <div class="mt-2 text-sm text-gray-400">Realismo</div>
-        </a>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+            <div class="translate-y-4 group-hover:translate-y-0 transition duration-500">
+              <span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-2">Fineline</span>
+              <h3 class="text-xl font-bold text-white">Detalhes Microscópicos</h3>
+              <p class="text-gray-300 text-sm mt-1">Tatuagem minimalista com traços precisos</p>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <div class="text-center mt-12">
-        <a href="#" class="inline-block border-2 border-white dark:border-black px-6 py-3 rounded-full font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition">
-          Ver Portfólio Completo
-        </a>
+
+      <!-- Portfolio Item 2 -->
+      <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500">
+        <div class="relative overflow-hidden">
+          <img src="./landing-pedro-tattoo/blackwork.png" 
+               class="w-full h-80 md:h-96 object-cover transform group-hover:scale-110 transition duration-700"
+               loading="lazy"
+               width="400"
+               height="400"
+               alt="Tatuagem blackwork">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+            <div class="translate-y-4 group-hover:translate-y-0 transition duration-500">
+              <span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-2">Blackwork</span>
+              <h3 class="text-xl font-bold text-white">Contraste Poderoso</h3>
+              <p class="text-gray-300 text-sm mt-1">Designs sólidos com alto impacto visual</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 3 -->
+      <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500">
+        <div class="relative overflow-hidden">
+          <img src="./landing-pedro-tattoo/pedro tattoo01.jpg" 
+               class="w-full h-80 md:h-96 object-cover transform group-hover:scale-110 transition duration-700"
+               loading="lazy"
+               width="400"
+               height="400"
+               alt="Tatuagem Geek">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+            <div class="translate-y-4 group-hover:translate-y-0 transition duration-500">
+              <span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-2">Geek</span>
+              <h3 class="text-xl font-bold text-white">Cultura Pop</h3>
+              <p class="text-gray-300 text-sm mt-1">Homenagem aos personagens icônicos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 4 -->
+      <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500">
+        <div class="relative overflow-hidden">
+          <img src="./landing-pedro-tattoo/realismo.png" 
+               class="w-full h-80 md:h-96 object-cover transform group-hover:scale-110 transition duration-700"
+               loading="lazy"
+               width="400"
+               height="400"
+               alt="Tatuagem realista">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+            <div class="translate-y-4 group-hover:translate-y-0 transition duration-500">
+              <span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-2">Realismo</span>
+              <h3 class="text-xl font-bold text-white">Arte Hiper-realista</h3>
+              <p class="text-gray-300 text-sm mt-1">Detalhes que parecem saltar da pele</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 5 -->
+      <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500">
+        <div class="relative overflow-hidden">
+          <img src="https://source.unsplash.com/random/600x600/?tattoo5" 
+               class="w-full h-80 md:h-96 object-cover transform group-hover:scale-110 transition duration-700"
+               loading="lazy"
+               width="400"
+               height="400"
+               alt="Tatuagem minimalista">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+            <div class="translate-y-4 group-hover:translate-y-0 transition duration-500">
+              <span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-2">Minimalista</span>
+              <h3 class="text-xl font-bold text-white">Simplicidade Elegante</h3>
+              <p class="text-gray-300 text-sm mt-1">Traços limpos e significados profundos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 6 -->
+      <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500">
+        <div class="relative overflow-hidden">
+          <img src="https://source.unsplash.com/random/600x600/?tattoo6" 
+               class="w-full h-80 md:h-96 object-cover transform group-hover:scale-110 transition duration-700"
+               loading="lazy"
+               width="400"
+               height="400"
+               alt="Tatuagem geométrica">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+            <div class="translate-y-4 group-hover:translate-y-0 transition duration-500">
+              <span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-2">Geométrica</span>
+              <h3 class="text-xl font-bold text-white">Precisão Matemática</h3>
+              <p class="text-gray-300 text-sm mt-1">Formas perfeitas e simetria</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+
+    <!-- Portfolio CTA -->
+    <div class="text-center">
+      <a href="#" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white dark:border-black text-white dark:text-black rounded-full font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all duration-300 transform hover:scale-105 group">
+        <span class="mr-3">Ver Portfólio Completo</span>
+        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </div>
+
+    <!-- Testimonials Carousel -->
+    <div class="mt-24 bg-zinc-800/50 dark:bg-white/10 rounded-2xl p-8 md:p-12 border border-zinc-700/30 dark:border-gray-200/20">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl md:text-3xl font-anton mb-3">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-500">O Que Dizem Nossos Clientes</span>
+        </h3>
+        <p class="text-gray-300 dark:text-gray-400 max-w-2xl mx-auto">Experiências reais de quem já transformou sua pele em arte</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-zinc-900/50 dark:bg-white/5 p-6 rounded-xl border border-zinc-800 dark:border-gray-200/10 hover:border-primary/30 transition">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-bold">Ana Carolina</h4>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-300 dark:text-gray-400 italic">"O Pedro transformou minha ideia em algo muito mais incrível do que eu imaginava. A atenção aos detalhes e o cuidado com a higiene são impressionantes!"</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-zinc-900/50 dark:bg-white/5 p-6 rounded-xl border border-zinc-800 dark:border-gray-200/10 hover:border-primary/30 transition">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-bold">Ricardo Almeida</h4>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-300 dark:text-gray-400 italic">"Melhor tatuador que já fui! O processo foi super profissional e o resultado final ficou perfeito. Já estou planejando minha próxima tatuagem com ele."</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-zinc-900/50 dark:bg-white/5 p-6 rounded-xl border border-zinc-800 dark:border-gray-200/10 hover:border-primary/30 transition">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-bold">Juliana Santos</h4>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-300 dark:text-gray-400 italic">"Levei meu filho para fazer sua primeira tatuagem e o Pedro foi incrível com ele. Criou um ambiente super acolhedor e o resultado ficou maravilhoso!"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Portfolio Filter Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('#portfolio button');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary', 'text-white');
+          btn.classList.add('bg-transparent', 'text-gray-300', 'dark:text-gray-400');
+        });
+        
+        // Add active class to clicked button
+        this.classList.remove('bg-transparent', 'text-gray-300', 'dark:text-gray-400');
+        this.classList.add('bg-primary', 'text-white');
+        
+        // Filter portfolio items
+        const filterValue = this.textContent.trim().toLowerCase();
+        
+        portfolioItems.forEach(item => {
+          if (filterValue === 'todos' || item.querySelector('span').textContent.toLowerCase() === filterValue) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
 
   <!-- Care FAQ Section -->
-  <section id="care" class="bg-zinc-900 dark:bg-zinc-100 py-20 px-4">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl mb-4 font-anton">CUIDADOS ANTES E APÓS SUA TATUAGEM</h2>
-        <p class="text-lg">Tudo o que você precisa saber para garantir uma tatuagem perfeita e uma cicatrização impecável.</p>
-      </div>
-      
-      <div class="space-y-6">
-        <!-- Before Care -->
-        <div class="mb-12">
-          <h3 class="text-2xl font-bold mb-6 text-primary border-b pb-2">PREPARAÇÃO ANTES DA TATUAGEM</h3>
-          
-          <div class="space-y-4">
-            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
-              <h4 class="font-bold text-lg mb-2 flex items-center">
-                <i class="fas fa-question-circle text-primary mr-3"></i>
-                Posso beber álcool antes da sessão?
-              </h4>
-              <p class="text-gray-300 dark:text-gray-600">Não recomendamos o consumo de álcool nas 24 horas anteriores à sessão, pois ele afina o sangue e pode aumentar o sangramento durante o processo.</p>
-            </div>
-            
-            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
-              <h4 class="font-bold text-lg mb-2 flex items-center">
-                <i class="fas fa-question-circle text-primary mr-3"></i>
-                Devo me alimentar antes da tatuagem?
-              </h4>
-              <p class="text-gray-300 dark:text-gray-600">Sim! É fundamental fazer uma boa refeição antes da sessão. Traga também um lanche e água, principalmente para sessões longas.</p>
-            </div>
-            
-            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
-              <h4 class="font-bold text-lg mb-2 flex items-center">
-                <i class="fas fa-question-circle text-primary mr-3"></i>
-                Posso tomar remédios para dor?
-              </h4>
-              <p class="text-gray-300 dark:text-gray-600">Evite anti-inflamatórios e aspirina antes da sessão, pois eles podem afinar o sangue. Consulte seu médico sobre outras medicações.</p>
+<section id="care" class="py-16 md:py-20 px-4 mobile-padding bg-gradient-to-br from-zinc-900 to-secondary dark:from-zinc-100 dark:to-gray-200">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl mb-4 font-anton bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-500">
+        CUIDADOS ESSENCIAIS
+      </h2>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto">
+        Seu cuidado faz parte da arte. Veja como manter sua tatuagem perfeita.
+      </p>
+    </div>
+    
+    <!-- Timeline Interactive Care -->
+    <div class="mb-16">
+      <h3 class="text-xl md:text-2xl font-bold mb-6 text-center text-primary">
+        JORNADA DA SUA TATUAGEM
+      </h3>
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-1/2 h-full w-1 bg-primary/20 transform -translate-x-1/2 hidden md:block"></div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Before Care -->
+          <div class="md:text-right md:pr-10 relative group">
+            <div class="hidden md:block absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-primary border-4 border-white dark:border-black z-10 group-hover:scale-125 transition"></div>
+            <div class="bg-zinc-800/50 dark:bg-white/80 dark:text-black p-6 rounded-xl shadow-lg hover:shadow-xl transition group-hover:-translate-y-1">
+              <div class="flex items-center justify-end mb-3">
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-bold mr-2">ANTES</span>
+                <i class="fas fa-calendar-check text-primary text-xl"></i>
+              </div>
+              <h4 class="text-lg md:text-xl font-bold mb-3">Preparação Ideal</h4>
+              <ul class="space-y-2 text-sm md:text-base">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Beba muita água no dia anterior</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Evite álcool 24h antes</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Alimente-se bem antes da sessão</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Durma bem na noite anterior</span>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-        
-        <!-- After Care -->
-        <div>
-          <h3 class="text-2xl font-bold mb-6 text-primary border-b pb-2">CUIDADOS APÓS A TATUAGEM</h3>
           
-          <div class="space-y-4">
-            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
-              <h4 class="font-bold text-lg mb-2 flex items-center">
-                <i class="fas fa-question-circle text-primary mr-3"></i>
-                Como devo lavar minha tatuagem?
-              </h4>
-              <p class="text-gray-300 dark:text-gray-600">Lave suavemente com água morna e sabão neutro 2-3 vezes ao dia. Use apenas os dedos, nunca esponjas, e seque dando leves batidinhas com papel toalha.</p>
+          <!-- Empty space for timeline alignment -->
+          <div class="hidden md:block"></div>
+          
+          <!-- First 24h -->
+          <div class="hidden md:block"></div>
+          <div class="md:text-left md:pl-10 relative group">
+            <div class="hidden md:block absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-primary border-4 border-white dark:border-black z-10 group-hover:scale-125 transition"></div>
+            <div class="bg-zinc-800/50 dark:bg-white/80 dark:text-black p-6 rounded-xl shadow-lg hover:shadow-xl transition group-hover:-translate-y-1">
+              <div class="flex items-center mb-3">
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-bold mr-2">24H</span>
+                <i class="fas fa-clock text-primary text-xl"></i>
+              </div>
+              <h4 class="text-lg md:text-xl font-bold mb-3">Primeiras Horas Cruciais</h4>
+              <ul class="space-y-2 text-sm md:text-base">
+                <li class="flex items-start">
+                  <i class="fas fa-hand-holding-water text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Mantenha o plástico por 2-4 horas</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-bath text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Lave suavemente com sabão neutro</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-hand-paper text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Não coce ou mexa na casquinha</span>
+                </li>
+              </ul>
             </div>
-            
-            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
-              <h4 class="font-bold text-lg mb-2 flex items-center">
-                <i class="fas fa-question-circle text-primary mr-3"></i>
-                Qual pomada devo usar?
-              </h4>
-              <p class="text-gray-300 dark:text-gray-600">Recomendamos Bepantol ou similar. Aplique uma camada bem fina 2-3 vezes ao dia após a lavagem, apenas o suficiente para manter a área hidratada.</p>
+          </div>
+          
+          <!-- First Week -->
+          <div class="md:text-right md:pr-10 relative group">
+            <div class="hidden md:block absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-primary border-4 border-white dark:border-black z-10 group-hover:scale-125 transition"></div>
+            <div class="bg-zinc-800/50 dark:bg-white/80 dark:text-black p-6 rounded-xl shadow-lg hover:shadow-xl transition group-hover:-translate-y-1">
+              <div class="flex items-center justify-end mb-3">
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-bold mr-2">1ª SEMANA</span>
+                <i class="fas fa-calendar-week text-primary text-xl"></i>
+              </div>
+              <h4 class="text-lg md:text-xl font-bold mb-3">Fase de Cicatrização</h4>
+              <ul class="space-y-2 text-sm md:text-base">
+                <li class="flex items-start">
+                  <i class="fas fa-prescription-bottle-alt text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Aplique pomada 2-3 vezes ao dia</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-shower text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Evite banhos muito quentes</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-swimming-pool text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Nada de piscina ou mar</span>
+                </li>
+              </ul>
             </div>
-            
-            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
-              <h4 class="font-bold text-lg mb-2 flex items-center">
-                <i class="fas fa-question-circle text-primary mr-3"></i>
-                Posso ir à praia ou piscina?
-              </h4>
-              <p class="text-gray-300 dark:text-gray-600">Evite totalmente imersão em água (mar, piscina, banheira) por pelo menos 3 semanas. A exposição ao sol deve ser evitada por 1 mês.</p>
-            </div>
-            
-            <div class="bg-zinc-800 dark:bg-white dark:text-black p-6 rounded-xl">
-              <h4 class="font-bold text-lg mb-2 flex items-center">
-                <i class="fas fa-question-circle text-primary mr-3"></i>
-                Quanto tempo leva para cicatrizar?
-              </h4>
-              <p class="text-gray-300 dark:text-gray-600">A cicatrização superficial leva cerca de 2 semanas, mas a completa cicatrização das camadas mais profundas pode levar até 2 meses. Siga todos os cuidados durante este período.</p>
+          </div>
+          
+          <!-- Empty space for timeline alignment -->
+          <div class="hidden md:block"></div>
+          
+          <!-- First Month -->
+          <div class="hidden md:block"></div>
+          <div class="md:text-left md:pl-10 relative group">
+            <div class="hidden md:block absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-primary border-4 border-white dark:border-black z-10 group-hover:scale-125 transition"></div>
+            <div class="bg-zinc-800/50 dark:bg-white/80 dark:text-black p-6 rounded-xl shadow-lg hover:shadow-xl transition group-hover:-translate-y-1">
+              <div class="flex items-center mb-3">
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-bold mr-2">1º MÊS</span>
+                <i class="fas fa-sun text-primary text-xl"></i>
+              </div>
+              <h4 class="text-lg md:text-xl font-bold mb-3">Proteção e Finalização</h4>
+              <ul class="space-y-2 text-sm md:text-base">
+                <li class="flex items-start">
+                  <i class="fas fa-sun text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Use protetor solar FPS 50+</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-lotion text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Hidrate a pele diariamente</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-tshirt text-primary mr-2 mt-1 text-xs"></i>
+                  <span>Evite roupas apertadas no local</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
+    <!-- FAQ Accordion -->
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-xl md:text-2xl font-bold mb-8 text-center text-primary">
+        PERGUNTAS FREQUENTES
+      </h3>
+      
+      <div class="space-y-4">
+        <!-- FAQ Item -->
+        <div class="group border-b border-zinc-700 dark:border-gray-300 pb-4">
+          <button class="faq-question flex justify-between items-center w-full text-left py-3 focus:outline-none">
+            <span class="text-lg md:text-xl font-medium group-hover:text-primary transition">Posso fazer exercício após tatuar?</span>
+            <i class="fas fa-chevron-down text-primary transform transition duration-300 group-[.active]:rotate-180"></i>
+          </button>
+          <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+            <div class="py-2 text-gray-300 dark:text-gray-600">
+              <p>Recomendamos evitar exercícios intensos por pelo menos 48 horas. Atividades que causam muito suor ou atrito na área tatuada podem prejudicar a cicatrização. Após 2 dias, você pode retomar gradualmente, mas evite natação e esportes de contato por pelo menos 2 semanas.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item -->
+        <div class="group border-b border-zinc-700 dark:border-gray-300 pb-4">
+          <button class="faq-question flex justify-between items-center w-full text-left py-3 focus:outline-none">
+            <span class="text-lg md:text-xl font-medium group-hover:text-primary transition">Quanto tempo até poder nadar no mar?</span>
+            <i class="fas fa-chevron-down text-primary transform transition duration-300 group-[.active]:rotate-180"></i>
+          </button>
+          <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+            <div class="py-2 text-gray-300 dark:text-gray-600">
+              <p>O ideal é esperar no mínimo 3 semanas antes de expor sua nova tatuagem à água do mar ou piscina. A água salgada e os químicos podem causar irritação, infecção e até mesmo desbotamento prematuro da tatuagem.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item -->
+        <div class="group border-b border-zinc-700 dark:border-gray-300 pb-4">
+          <button class="faq-question flex justify-between items-center w-full text-left py-3 focus:outline-none">
+            <span class="text-lg md:text-xl font-medium group-hover:text-primary transition">Posso pegar sol na tatuagem nova?</span>
+            <i class="fas fa-chevron-down text-primary transform transition duration-300 group-[.active]:rotate-180"></i>
+          </button>
+          <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+            <div class="py-2 text-gray-300 dark:text-gray-600">
+              <p>Evite totalmente a exposição direta ao sol nas primeiras 4 semanas. Após esse período, use sempre protetor solar FPS 50+ na tatuagem, mesmo que já esteja completamente cicatrizada. O sol é a principal causa de desbotamento das tatuagens.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item -->
+        <div class="group border-b border-zinc-700 dark:border-gray-300 pb-4">
+          <button class="faq-question flex justify-between items-center w-full text-left py-3 focus:outline-none">
+            <span class="text-lg md:text-xl font-medium group-hover:text-primary transition">Quanto tempo leva para cicatrizar completamente?</span>
+            <i class="fas fa-chevron-down text-primary transform transition duration-300 group-[.active]:rotate-180"></i>
+          </button>
+          <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+            <div class="py-2 text-gray-300 dark:text-gray-600">
+              <p>A cicatrização superficial ocorre em cerca de 2 semanas, mas a pele ainda está se regenerando por baixo. A cicatrização completa leva de 4 a 6 semanas. Tatuagens maiores ou em áreas de maior movimento podem levar até 2 meses para cicatrizar totalmente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Emergency Care -->
+    <div class="mt-16 bg-gradient-to-r from-primary/20 to-secondary/20 dark:from-primary/10 dark:to-gray-200/10 p-6 md:p-8 rounded-xl border-l-4 border-primary">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="text-4xl md:text-5xl text-primary">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-xl md:text-2xl font-bold mb-3">ATENÇÃO: Sinais de Problemas</h3>
+          <p class="mb-4">Se notar qualquer destes sinais, entre em contato imediatamente:</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex items-start">
+              <i class="fas fa-times-circle text-red-500 mr-2 mt-1"></i>
+              <span>Vermelhidão excessiva após 3 dias</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-times-circle text-red-500 mr-2 mt-1"></i>
+              <span>Secreção amarelada ou com pus</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-times-circle text-red-500 mr-2 mt-1"></i>
+              <span>Dor que piora em vez de melhorar</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-times-circle text-red-500 mr-2 mt-1"></i>
+              <span>Febre ou mal-estar geral</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/5511912345678" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-bold transition flex items-center whitespace-nowrap">
+          <i class="fab fa-whatsapp mr-2"></i> EMERGÊNCIA
+        </a>
+      </div>
+    </div>
   </section>
 
+<script>
+  // FAQ Accordion Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isOpen = answer.style.maxHeight;
+        
+        // Close all answers first
+        document.querySelectorAll('.faq-answer').forEach(ans => {
+          ans.style.maxHeight = null;
+          ans.previousElementSibling.parentElement.classList.remove('active');
+        });
+        
+        // Open clicked one if it was closed
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          question.parentElement.classList.add('active');
+        }
+      });
+    });
+    
+    // Open first FAQ by default
+    if (faqQuestions.length > 0) {
+      const firstAnswer = faqQuestions[0].nextElementSibling;
+      firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+      faqQuestions[0].parentElement.classList.add('active');
+    }
+  });
+</script>
   <!-- Contact Section -->
-  <section id="contact" class="py-20 px-4">
+  <section id="contact" class="py-16 md:py-20 px-4 mobile-padding">
     <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row gap-12">
-        <div class="md:w-1/2">
-          <h2 class="text-3xl md:text-4xl mb-6 font-anton">Venha viver a experiência.</h2>
-          <p class="text-lg mb-8">Agende uma consulta para discutir sua ideia e transformá-la em uma obra de arte permanente.</p>
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 mobile-stack">
+        <div class="md:w-1/2 w-full mobile-text-center">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 font-anton">Venha viver a experiência.</h2>
+          <p class="text-base md:text-lg mb-6 md:mb-8">Agende uma consulta para discutir sua ideia e transformá-la em uma obra de arte permanente.</p>
           
-          <div class="space-y-4 mb-8">
+          <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
             <div class="flex items-start">
-              <div class="text-primary mr-4 mt-1">
+              <div class="text-primary mr-3 md:mr-4 mt-1">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div>
-                <h4 class="font-bold">Estúdio PCT</h4>
-                <p>Rua das Artes, 123 - Vila Madalena<br>São Paulo/SP - CEP 05432-000</p>
+                <h4 class="font-bold text-base md:text-lg">Estúdio PCT</h4>
+                <p class="text-sm md:text-base">Rua das Artes, 123 - Vila Madalena<br>São Paulo/SP - CEP 05432-000</p>
               </div>
             </div>
             
             <div class="flex items-start">
-              <div class="text-primary mr-4 mt-1">
+              <div class="text-primary mr-3 md:mr-4 mt-1">
                 <i class="fas fa-clock"></i>
               </div>
               <div>
-                <h4 class="font-bold">Horário de Funcionamento</h4>
-                <p>Segunda a Sábado - 10h às 20h<br>Domingo - Fechado</p>
+                <h4 class="font-bold text-base md:text-lg">Horário de Funcionamento</h4>
+                <p class="text-sm md:text-base">Segunda a Sábado - 10h às 20h<br>Domingo - Fechado</p>
               </div>
             </div>
             
             <div class="flex items-start">
-              <div class="text-primary mr-4 mt-1">
+              <div class="text-primary mr-3 md:mr-4 mt-1">
                 <i class="fas fa-phone-alt"></i>
               </div>
               <div>
-                <h4 class="font-bold">Contato</h4>
-                <p>WhatsApp: (11) 91234-5678<br>Email: contato@pedrocordeirotattoo.com</p>
+                <h4 class="font-bold text-base md:text-lg">Contato</h4>
+                <p class="text-sm md:text-base">WhatsApp: (11) 91234-5678<br>Email: contato@pedrocordeirotattoo.com</p>
               </div>
             </div>
           </div>
           
-          <div class="flex flex-wrap gap-4">
-            <a href="https://wa.me/5511912345678" class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition flex items-center">
+          <div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
+            <a href="https://wa.me/5511912345678" class="bg-primary text-white px-5 py-2 md:px-6 md:py-3 rounded-full font-bold hover:bg-red-700 transition flex items-center text-sm md:text-base">
               <i class="fab fa-whatsapp mr-2"></i> WhatsApp
             </a>
-            <a href="tel:+5511912345678" class="border-2 border-white dark:border-black px-6 py-3 rounded-full font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition flex items-center">
+            <a href="tel:+5511912345678" class="border-2 border-white dark:border-black px-5 py-2 md:px-6 md:py-3 rounded-full font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition flex items-center text-sm md:text-base">
               <i class="fas fa-phone-alt mr-2"></i> Ligar
             </a>
           </div>
         </div>
         
-        <div class="md:w-1/2">
-          <div class="bg-zinc-900 dark:bg-gray-100 p-8 rounded-xl shadow-lg">
-            <h3 class="text-2xl mb-6 font-anton">Agende sua sessão</h3>
+        <div class="md:w-1/2 w-full">
+          <div class="bg-zinc-900 dark:bg-gray-100 p-6 md:p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl md:text-2xl mb-4 md:mb-6 font-anton">Agende sua sessão</h3>
             <form>
-              <div class="mb-4">
-                <label for="name" class="block mb-2">Nome Completo</label>
-                <input type="text" id="name" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <div class="mb-3 md:mb-4">
+                <label for="name" class="block mb-1 md:mb-2 text-sm md:text-base">Nome Completo</label>
+                <input type="text" id="name" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base">
               </div>
               
-              <div class="mb-4">
-                <label for="email" class="block mb-2">Email</label>
-                <input type="email" id="email" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <div class="mb-3 md:mb-4">
+                <label for="email" class="block mb-1 md:mb-2 text-sm md:text-base">Email</label>
+                <input type="email" id="email" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base">
               </div>
               
-              <div class="mb-4">
-                <label for="phone" class="block mb-2">Telefone</label>
-                <input type="tel" id="phone" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <div class="mb-3 md:mb-4">
+                <label for="phone" class="block mb-1 md:mb-2 text-sm md:text-base">Telefone</label>
+                <input type="tel" id="phone" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base">
               </div>
               
-              <div class="mb-4">
-                <label for="style" class="block mb-2">Estilo de Tatuagem</label>
-                <select id="style" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <div class="mb-3 md:mb-4">
+                <label for="style" class="block mb-1 md:mb-2 text-sm md:text-base">Estilo de Tatuagem</label>
+                <select id="style" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base">
                   <option value="">Selecione um estilo</option>
                   <option value="fineline">Fineline</option>
                   <option value="blackwork">Blackwork</option>
@@ -376,12 +1047,12 @@
                 </select>
               </div>
               
-              <div class="mb-4">
-                <label for="message" class="block mb-2">Descreva sua ideia</label>
-                <textarea id="message" rows="4" class="w-full px-4 py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+              <div class="mb-3 md:mb-4">
+                <label for="message" class="block mb-1 md:mb-2 text-sm md:text-base">Descreva sua ideia</label>
+                <textarea id="message" rows="4" class="w-full px-3 py-2 md:px-4 md:py-3 bg-zinc-800 dark:bg-white border border-zinc-700 dark:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base"></textarea>
               </div>
               
-              <button type="submit" class="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-red-700 transition">
+              <button type="submit" class="w-full bg-primary text-white py-3 md:py-4 rounded-lg font-bold hover:bg-red-700 transition text-sm md:text-base">
                 Enviar Solicitação
               </button>
             </form>
@@ -389,63 +1060,94 @@
         </div>
       </div>
       
-      <div class="mt-12 rounded-xl overflow-hidden shadow-2xl">
+      <div class="mt-8 md:mt-12 rounded-xl overflow-hidden shadow-2xl">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.2886086296317!2d-52.1147555257884!3d-21.769088398201884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9491994ee6894739%3A0x2a17e83562f57b44!2sPEDRO%20CORDEIRO%20TATTOO!5e0!3m2!1spt-BR!2sbr!4v1751811502101!5m2!1spt-BR!2sbr" 
                 width="100%" 
-                height="450" 
+                height="400" 
                 style="border:0;" 
                 allowfullscreen="" 
                 loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização do Estúdio">
         </iframe>
       </div>
     </div>
   </section>
 
   <!-- Instagram Section -->
-  <section class="bg-zinc-900 dark:bg-zinc-100 py-20 px-4">
+  <section class="bg-zinc-900 dark:bg-zinc-100 py-16 md:py-20 px-4 mobile-padding">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl mb-4 font-anton">Acompanhe nosso trabalho</h2>
-        <p class="text-lg mb-6">Siga-nos no Instagram para ver nossos últimos trabalhos e novidades.</p>
-        <a href="https://instagram.com/pedrocordeirotattoo" class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-bold hover:opacity-90 transition">
-          <i class="fab fa-instagram mr-2 text-xl"></i> @pedrocordeirotattoo
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-anton">Acompanhe nosso trabalho</h2>
+        <p class="text-base md:text-lg mb-4 md:mb-6">Siga-nos no Instagram para ver nossos últimos trabalhos e novidades.</p>
+        <a href="https://instagram.com/pedrocordeirotattoo" class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 py-2 md:px-6 md:py-3 rounded-full font-bold hover:opacity-90 transition text-sm md:text-base">
+          <i class="fab fa-instagram mr-2"></i> @pedrocordeirotattoo
         </a>
       </div>
       
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
         <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo1" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+          <img src="https://source.unsplash.com/300x300/?tattoo1" 
+               class="w-full h-32 object-cover hover:opacity-90 transition"
+               loading="lazy"
+               width="300"
+               height="300"
+               alt="Instagram post">
         </a>
         <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo2" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+          <img src="https://source.unsplash.com/300x300/?tattoo2" 
+               class="w-full h-32 object-cover hover:opacity-90 transition"
+               loading="lazy"
+               width="300"
+               height="300"
+               alt="Instagram post">
         </a>
         <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo3" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+          <img src="https://source.unsplash.com/300x300/?tattoo3" 
+               class="w-full h-32 object-cover hover:opacity-90 transition"
+               loading="lazy"
+               width="300"
+               height="300"
+               alt="Instagram post">
         </a>
         <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo4" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+          <img src="https://source.unsplash.com/300x300/?tattoo4" 
+               class="w-full h-32 object-cover hover:opacity-90 transition"
+               loading="lazy"
+               width="300"
+               height="300"
+               alt="Instagram post">
         </a>
         <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo5" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+          <img src="https://source.unsplash.com/300x300/?tattoo5" 
+               class="w-full h-32 object-cover hover:opacity-90 transition"
+               loading="lazy"
+               width="300"
+               height="300"
+               alt="Instagram post">
         </a>
         <a href="#" class="instagram-post">
-          <img src="https://source.unsplash.com/300x300/?tattoo6" class="w-full h-32 object-cover hover:opacity-90 transition" alt="Instagram post">
+          <img src="https://source.unsplash.com/300x300/?tattoo6" 
+               class="w-full h-32 object-cover hover:opacity-90 transition"
+               loading="lazy"
+               width="300"
+               height="300"
+               alt="Instagram post">
         </a>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="bg-black dark:bg-gray-200 py-16 px-4 text-center">
+  <section class="bg-black dark:bg-gray-200 py-12 md:py-16 px-4 text-center">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl mb-6 font-pricedown">SEU CORPO MERECE ARTE COM PROPÓSITO</h2>
-      <p class="text-xl mb-8 font-pricedown">PRONTO PARA ETERNIZAR UMA IDEIA NA PELE?</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://wa.me/5511912345678" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 font-pricedown">SEU CORPO MERECE ARTE COM PROPÓSITO</h2>
+      <p class="text-lg md:text-xl mb-6 md:mb-8 font-pricedown">PRONTO PARA ETERNIZAR UMA IDEIA NA PELE?</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
+        <a href="https://wa.me/5511912345678" class="bg-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
           <i class="fab fa-whatsapp mr-2"></i> AGENDAR PELO WHATSAPP
         </a>
-        <a href="#contact" class="border-2 border-white dark:border-black px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105 font-pricedown">
+        <a href="#contact" class="border-2 border-white dark:border-black px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-bold hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition transform hover:scale-105 font-pricedown">
           <i class="fas fa-envelope mr-2"></i> ENVIAR EMAIL
         </a>
       </div>
@@ -453,98 +1155,114 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-zinc-900 dark:bg-zinc-200 py-12 px-4">
+  <footer class="bg-zinc-900 dark:bg-zinc-200 py-8 md:py-12 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-6 md:mb-0">
-          <span class="text-2xl font-pricedown text-primary">PEDRO CORDEIRO TATTOO</span>
-          <p class="text-sm mt-2 text-gray-400 dark:text-gray-600">Tatuagens que marcam por toda vida.</p>
+        <div class="mb-4 md:mb-0 text-center md:text-left">
+          <span class="text-xl md:text-2xl logo-text">PEDRO CORDEIRO TATTOO</span>
+          <p class="text-xs md:text-sm mt-1 md:mt-2 text-gray-400 dark:text-gray-600">Tatuagens que marcam por toda vida.</p>
         </div>
         
-        <div class="flex space-x-6 mb-6 md:mb-0">
-          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-xl">
+        <div class="flex space-x-4 md:space-x-6 mb-4 md:mb-0">
+          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-lg md:text-xl">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-xl">
+          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-lg md:text-xl">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-xl">
+          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-lg md:text-xl">
             <i class="fab fa-tiktok"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-xl">
+          <a href="#" class="text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black text-lg md:text-xl">
             <i class="fab fa-youtube"></i>
           </a>
         </div>
         
         <div class="text-center md:text-right">
-          <p class="text-sm text-gray-400 dark:text-gray-600">© 2023 Pedro Cordeiro Tattoo. Todos os direitos reservados.</p>
-          <div class="flex justify-center md:justify-end space-x-4 mt-2">
-            <a href="#" class="text-xs text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black">Termos de Serviço</a>
-            <a href="#" class="text-xs text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black">Política de Privacidade</a>
-            <a href="#" class="text-xs text-gray-400 hover:text-primary dark:text-gray-600 dark:hover:text-black">Cuidados Pós-Tatuagem</a>
+          <p class="text-xs md:text-sm text-gray-400 dark:text-gray-600">© 2023 Pedro Cordeiro Tattoo. Todos os direitos reservados.</p>
+          <div class="flex justify-center md:justify-end space-x-2 md:space-x-4 mt-1 md:mt-2">
+            <a href="#" class="text-xs hover:text-primary dark:hover:text-black">Termos</a>
+            <a href="#" class="text-xs hover:text-primary dark:hover:text-black">Privacidade</a>
+            <a href="#" class="text-xs hover:text-primary dark:hover:text-black">Cuidados</a>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Lightbox -->
+  <!-- Lightbox melhorado -->
   <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
     <div class="relative max-w-4xl w-full">
-      <button id="close-lightbox" class="absolute -top-12 right-0 text-white text-3xl hover:text-primary">
+      <button id="close-lightbox" class="absolute -top-10 md:-top-12 right-0 text-white text-2xl md:text-3xl hover:text-primary bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center">
         <i class="fas fa-times"></i>
       </button>
-      <img id="lightbox-img" src="" class="w-full max-h-[80vh] object-contain" alt="">
-      <div id="lightbox-caption" class="text-white text-center mt-4"></div>
+      <img id="lightbox-img" src="" class="w-full max-h-[80vh] object-contain rounded-lg" alt="" loading="eager">
+      <div id="lightbox-caption" class="text-white text-center mt-2 md:mt-4 text-sm md:text-base"></div>
     </div>
   </div>
 
+  <!-- Scripts otimizados -->
   <script>
-    // Mobile menu toggle
-    document.getElementById('menu-btn').addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
+    // Carregar scripts não críticos após o conteúdo principal
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      document.getElementById('menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
 
-    // Lightbox functionality
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    const closeLightbox = document.getElementById('close-lightbox');
+      // Lightbox functionality
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const closeLightbox = document.getElementById('close-lightbox');
 
-    portfolioItems.forEach(item => {
-      item.addEventListener('click', function(e) {
-        e.preventDefault();
-        const imgSrc = this.getAttribute('href');
-        const caption = this.querySelector('div').textContent;
-        
-        lightboxImg.setAttribute('src', imgSrc);
-        lightboxCaption.textContent = caption;
-        lightbox.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
+      portfolioItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          const imgSrc = this.getAttribute('href');
+          const caption = this.querySelector('div').textContent;
+          
+          lightboxImg.setAttribute('src', imgSrc);
+          lightboxCaption.textContent = caption;
+          lightbox.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      closeLightbox.addEventListener('click', function() {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      });
+
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+          lightbox.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Filtro de portfólio
+      const filterButtons = document.querySelectorAll('#portfolio button');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Implementar lógica de filtro aqui
+          filterButtons.forEach(btn => btn.classList.remove('bg-primary', 'text-white'));
+          this.classList.add('bg-primary', 'text-white');
+        });
       });
     });
 
-    closeLightbox.addEventListener('click', function() {
-      lightbox.classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    });
-
-    lightbox.addEventListener('click', function(e) {
-      if (e.target === lightbox) {
-        lightbox.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    // Smooth scrolling for anchor links
+    // Scroll suave nativo (fallback para browsers modernos)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
       });
     });
   </script>
