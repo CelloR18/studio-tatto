@@ -192,7 +192,7 @@
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden flex items-center">
-          <button id="menu-btn" class="text-white dark:text-black p-2 focus:outline-none">
+          <button id="mobile-menu-btn" class="text-white dark:text-black p-2 focus:outline-none">
             <i class="fas fa-bars text-2xl transition transform hover:rotate-90"></i>
           </button>
         </div>
@@ -271,26 +271,29 @@
 </style>
 
 <script>
-  // Mobile Menu Toggle
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    menuBtn.addEventListener('click', function() {
-      mobileMenu.classList.toggle('hidden');
-      menuBtn.innerHTML = mobileMenu.classList.contains('hidden') ? 
-        '<i class="fas fa-bars text-2xl"></i>' : 
-        '<i class="fas fa-times text-2xl"></i>';
-    });
-    
-    // Close mobile menu when clicking on links
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', function() {
-        mobileMenu.classList.add('hidden');
-        menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
-      });
+  // Substituir o script existente por este:
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  menuBtn.addEventListener('click', function() {
+    mobileMenu.classList.toggle('hidden');
+    // Alternar entre ícone de hambúrguer e X
+    if (mobileMenu.classList.contains('hidden')) {
+      menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+    } else {
+      menuBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+    }
+  });
+  
+  // Fechar menu ao clicar nos links
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', function() {
+      mobileMenu.classList.add('hidden');
+      menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
     });
   });
+});
 </script>
 
   <!-- About Section - Premium Version -->
